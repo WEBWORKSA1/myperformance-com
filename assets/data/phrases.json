@@ -1,0 +1,352 @@
+{
+"competencies": {
+"Results & Productivity": {
+ "exceeds": [
+  "{N} consistently delivers ahead of deadline while maintaining exceptional quality; this quarter {n} closed {X}% more work than planned.",
+  "{N} sets an ambitious bar for output and reliably clears it, often absorbing additional scope without any drop in standards.",
+  "{N} turned the team's most stalled initiative into a delivered result by breaking it into weekly milestones and driving each one home.",
+  "{N} focuses relentlessly on outcomes rather than activity, and it shows: {p} projects finish on time, on budget and with measurable impact.",
+  "{N} regularly identifies and removes bottlenecks that slow the whole team down, multiplying the output of others.",
+  "{N} exceeded every quantitative target this cycle, including a {X}% improvement in the metric that matters most to the business.",
+  "{N} is the person the team trusts with the hardest deadlines because {n} has never missed one that mattered."
+ ],
+ "meets": [
+  "{N} completes assigned work on schedule and to the expected standard.",
+  "{N} manages a full workload effectively and communicates early when priorities need to shift.",
+  "{N} meets {p} quarterly targets and contributes reliably to team goals.",
+  "{N} maintains steady, predictable output that the team can plan around.",
+  "{N} balances competing priorities well and rarely lets urgent tasks crowd out important ones.",
+  "{N} delivers what {n} commits to and is honest about capacity when asked to take on more.",
+  "{N} finished all core deliverables this cycle and made solid progress on stretch goals."
+ ],
+ "needs": [
+  "{N} has missed several deadlines this cycle; agreeing realistic estimates upfront and flagging slippage earlier would help.",
+  "{N} tends to spread effort across too many tasks at once, which delays the highest-priority work. A weekly top-three list is recommended.",
+  "{N}'s output has been below the level expected for the role; we have agreed specific weekly targets for the next 90 days.",
+  "{N} often completes tasks but at a pace that creates downstream delays for teammates.",
+  "{N} would benefit from time-blocking focused work and reducing context switching during core hours.",
+  "{N} starts strongly but struggles to close projects; finishing the last 10% needs to become a priority.",
+  "{N} needs to convert activity into measurable results; we will track outcomes rather than hours from here on."
+ ]
+},
+"Quality of Work": {
+ "exceeds": [
+  "{N}'s work is consistently accurate, thorough and ready to ship without rework; error rates on {p} deliverables are the lowest on the team.",
+  "{N} anticipates edge cases others miss and designs solutions that hold up months later.",
+  "{N} raised the quality bar for the whole team by introducing a review checklist that cut defects by {X}%.",
+  "{N} treats every deliverable as if it carries {p} signature, and stakeholders notice the difference.",
+  "{N} balances speed and precision exceptionally well, delivering polished work under real deadline pressure.",
+  "{N}'s attention to detail has prevented at least {X} costly issues from reaching customers this year.",
+  "{N} produces work that colleagues use as the reference example for how things should be done."
+ ],
+ "meets": [
+  "{N} produces accurate, complete work that meets the standards of the role.",
+  "{N} checks {p} work carefully and fixes issues promptly when they are found.",
+  "{N} follows established processes and quality guidelines consistently.",
+  "{N}'s deliverables require minimal correction and are well received by stakeholders.",
+  "{N} takes feedback on quality seriously and applies it to subsequent work.",
+  "{N} maintains a good balance between thoroughness and delivery speed.",
+  "{N} documents {p} work clearly enough for others to pick it up."
+ ],
+ "needs": [
+  "{N}'s work frequently needs revision before it can be used; building in a self-review step before handoff is essential.",
+  "{N} has submitted deliverables with avoidable errors that affected downstream teams on {X} occasions this cycle.",
+  "{N} rushes to finish at the expense of accuracy; slowing down on the final check will save time overall.",
+  "{N} needs to follow the agreed quality checklist consistently rather than selectively.",
+  "{N} should ask clarifying questions earlier to avoid rework caused by misunderstood requirements.",
+  "{N}'s documentation is often incomplete, creating extra work for teammates who inherit {p} tasks.",
+  "{N} would benefit from pairing with a senior colleague on quality standards for the next quarter."
+ ]
+},
+"Communication": {
+ "exceeds": [
+  "{N} communicates complex ideas with unusual clarity, tailoring the message to executives, engineers and customers alike.",
+  "{N} keeps every stakeholder informed proactively; no one connected to {p} projects is ever surprised.",
+  "{N}'s written updates are so clear and well structured that they have become the team's template.",
+  "{N} listens actively, summarises accurately and makes people feel heard, which has defused several tense situations.",
+  "{N} presents with confidence and precision, and senior leaders regularly request {p} input in meetings.",
+  "{N} translates ambiguous requests into crisp requirements, saving the team hours of misdirected effort.",
+  "{N} gives and receives difficult feedback with remarkable tact and directness."
+ ],
+ "meets": [
+  "{N} communicates clearly and keeps the team informed of progress and blockers.",
+  "{N} writes well-organised emails and documents that are easy to act on.",
+  "{N} participates constructively in meetings and shares relevant information promptly.",
+  "{N} listens to others' viewpoints and responds thoughtfully.",
+  "{N} adapts {p} communication style appropriately for different audiences.",
+  "{N} asks good clarifying questions and confirms understanding before proceeding.",
+  "{N} responds to messages within a reasonable time and follows through on commitments."
+ ],
+ "needs": [
+  "{N} often leaves stakeholders guessing about status; a short weekly written update would resolve most of the friction.",
+  "{N}'s messages can be long and hard to act on; leading with the decision or ask, then the context, would help.",
+  "{N} tends to stay quiet in meetings even when {n} has relevant expertise; we would like to hear more from {o}.",
+  "{N} sometimes communicates frustration in ways that land poorly with colleagues; pausing before replying is recommended.",
+  "{N} should confirm requirements in writing to avoid the misunderstandings that have caused rework this cycle.",
+  "{N} needs to escalate blockers earlier rather than waiting until deadlines are at risk.",
+  "{N} would benefit from a presentation-skills course ahead of next quarter's stakeholder reviews."
+ ]
+},
+"Collaboration & Teamwork": {
+ "exceeds": [
+  "{N} is the glue of the team: {n} shares credit generously, unblocks others quickly and raises everyone's game.",
+  "{N} built strong working relationships across three departments that directly accelerated {p} project delivery.",
+  "{N} volunteers for the unglamorous shared work that keeps the team functioning.",
+  "{N} handles disagreement with maturity, focusing on the problem rather than the person.",
+  "{N} mentors newer teammates without being asked, and their onboarding time has visibly shortened.",
+  "{N} actively seeks out different perspectives before deciding, and the decisions are better for it.",
+  "{N} is consistently named by peers as the colleague they most want on their project."
+ ],
+ "meets": [
+  "{N} works well with colleagues and contributes positively to team culture.",
+  "{N} shares information and resources willingly with teammates.",
+  "{N} supports team decisions once made, even when {n} initially disagreed.",
+  "{N} is dependable in group work and completes {p} share on time.",
+  "{N} treats colleagues with respect and handles conflict professionally.",
+  "{N} collaborates effectively with other teams when projects require it.",
+  "{N} offers help to teammates during busy periods."
+ ],
+ "needs": [
+  "{N} tends to work in isolation, and teammates have been surprised late by decisions that affected them.",
+  "{N} should involve stakeholders earlier rather than presenting finished work for approval.",
+  "{N} has been reluctant to accept input from peers; treating review as a strength rather than a threat will help.",
+  "{N} can be dismissive in discussions, which discourages quieter colleagues from contributing.",
+  "{N} needs to share knowledge more openly so the team is not dependent on {o} for key tasks.",
+  "{N} should follow through more reliably on commitments made to other teams.",
+  "{N} would benefit from co-owning a project with a peer next quarter to strengthen collaboration habits."
+ ]
+},
+"Leadership & Ownership": {
+ "exceeds": [
+  "{N} takes complete ownership of outcomes, including the ones that go wrong, and fixes them without drama.",
+  "{N} steps into leadership gaps naturally and the team follows because {n} has earned it.",
+  "{N} sets a clear direction, explains the why, and gives people room to execute.",
+  "{N} makes tough calls with incomplete information and communicates them with conviction and humility.",
+  "{N} built a team culture where people speak up early about risks, which has saved multiple projects.",
+  "{N} develops others deliberately: two of {p} direct reports were promoted this year.",
+  "{N} models the standards {n} expects and is trusted by leadership with the most sensitive initiatives."
+ ],
+ "meets": [
+  "{N} takes responsibility for {p} work and follows through on commitments.",
+  "{N} gives clear direction to the people {n} works with and checks in appropriately.",
+  "{N} handles day-to-day decisions within {p} remit confidently.",
+  "{N} holds {o}self accountable for results and reports honestly on progress.",
+  "{N} supports team members and helps them remove obstacles.",
+  "{N} represents the team professionally in cross-functional settings.",
+  "{N} accepts feedback on {p} leadership and acts on it."
+ ],
+ "needs": [
+  "{N} tends to attribute setbacks to circumstances or others; taking clearer personal ownership is the priority.",
+  "{N} avoids difficult conversations with team members, allowing performance issues to persist.",
+  "{N} should delegate more; taking on too much personally is slowing the team and limiting others' growth.",
+  "{N} needs to make decisions more promptly; extended deliberation has stalled two initiatives this cycle.",
+  "{N} should set clearer expectations and check in more regularly on progress.",
+  "{N} would benefit from a leadership coaching programme focused on feedback and delegation.",
+  "{N} needs to communicate priorities consistently so the team is not pulled in different directions."
+ ]
+},
+"Problem Solving & Initiative": {
+ "exceeds": [
+  "{N} spots problems before they become visible to others and usually arrives with a proposed solution.",
+  "{N} reframed a stalled problem in a way that made the answer obvious to everyone, saving weeks of effort.",
+  "{N} combines analytical rigour with creativity, producing solutions that are both sound and elegant.",
+  "{N} launched {X} improvements this year that nobody asked for and everybody now relies on.",
+  "{N} digs to root causes instead of patching symptoms, so the same problems do not recur.",
+  "{N} treats ambiguity as an opportunity and consistently brings structure to messy situations.",
+  "{N} is the team's go-to person when something is broken and no one knows why."
+ ],
+ "meets": [
+  "{N} works through problems methodically and reaches sound conclusions.",
+  "{N} raises issues promptly and proposes reasonable options for resolving them.",
+  "{N} uses data and evidence appropriately when making decisions.",
+  "{N} shows initiative in improving {p} own processes and tools.",
+  "{N} knows when to solve independently and when to escalate.",
+  "{N} learns from mistakes and adjusts {p} approach accordingly.",
+  "{N} contributes useful ideas in planning and retrospectives."
+ ],
+ "needs": [
+  "{N} tends to wait for direction rather than proposing next steps; we would like {o} to bring options, not just problems.",
+  "{N} often addresses symptoms rather than root causes, so the same issues resurface.",
+  "{N} should gather more evidence before acting; several decisions this cycle were based on assumptions that proved wrong.",
+  "{N} needs to escalate sooner when {n} is stuck instead of spending days on an unproductive path.",
+  "{N} would benefit from structured problem-solving techniques such as the five whys or fishbone analysis.",
+  "{N} rarely suggests improvements; we would value {p} ideas on how the team's processes could work better.",
+  "{N} should test assumptions with a small experiment before committing the team to a full solution."
+ ]
+},
+"Reliability & Accountability": {
+ "exceeds": [
+  "{N} is completely dependable; when {n} says it will be done, it is done, and done well.",
+  "{N} owns mistakes openly and immediately, and turns them into process fixes for the whole team.",
+  "{N} has not missed a single commitment this year, including during two periods of heavy team turnover.",
+  "{N} keeps meticulous track of {p} commitments and never lets a request fall through the cracks.",
+  "{N} is trusted with unsupervised, high-stakes work because {n} has consistently earned it.",
+  "{N} sets an example of integrity that shapes how the whole team operates.",
+  "{N} follows through on even small promises, which has built exceptional trust with clients."
+ ],
+ "meets": [
+  "{N} can be relied upon to complete tasks as agreed.",
+  "{N} takes responsibility for {p} mistakes and works to correct them.",
+  "{N} is punctual and prepared for meetings and deadlines.",
+  "{N} honours commitments made to colleagues and clients.",
+  "{N} keeps accurate records and provides updates when asked.",
+  "{N} maintains consistent attendance and availability during working hours.",
+  "{N} acts in line with company values and policies."
+ ],
+ "needs": [
+  "{N} has repeatedly committed to deadlines that were not met without prior warning; reliability is the priority for this cycle.",
+  "{N} sometimes deflects responsibility when things go wrong; owning outcomes directly will build trust.",
+  "{N} needs to track {p} commitments more systematically so requests are not forgotten.",
+  "{N} has been late to or unprepared for several key meetings.",
+  "{N} should communicate as soon as a commitment is at risk rather than after the deadline passes.",
+  "{N}'s availability during core hours has been inconsistent and affected team coordination.",
+  "{N} would benefit from a simple task-tracking system reviewed weekly with {p} manager."
+ ]
+},
+"Growth & Learning": {
+ "exceeds": [
+  "{N} is relentlessly curious and turns everything {n} learns into something the team can use.",
+  "{N} completed {X} certifications this year and applied each one to a live project within weeks.",
+  "{N} asks for feedback constantly, acts on it visibly, and has grown more in one year than most do in three.",
+  "{N} stays ahead of industry developments and has brought several new practices to the team.",
+  "{N} deliberately takes on work outside {p} comfort zone and delivers anyway.",
+  "{N} coaches others on skills {n} mastered only recently, accelerating learning across the team.",
+  "{N} treats setbacks as data and adjusts quickly without losing momentum."
+ ],
+ "meets": [
+  "{N} is receptive to feedback and works to apply it.",
+  "{N} keeps {p} skills current and completes required training on time.",
+  "{N} seeks out learning opportunities relevant to {p} role.",
+  "{N} has developed noticeably in {p} core skills over the review period.",
+  "{N} shares useful learning with colleagues.",
+  "{N} sets development goals and makes steady progress against them.",
+  "{N} adapts well to new tools and processes."
+ ],
+ "needs": [
+  "{N} has not engaged with the development goals set at the last review; we need a concrete plan with monthly checkpoints.",
+  "{N} can be defensive when receiving feedback, which limits {p} growth; approaching it with curiosity would help.",
+  "{N}'s technical skills have not kept pace with the role's requirements; targeted training is needed this quarter.",
+  "{N} tends to stay within familiar tasks; stretching into new areas is necessary for progression.",
+  "{N} should actively seek feedback rather than waiting for formal reviews.",
+  "{N} has repeated the same mistakes after previous feedback; we will track specific behaviour changes going forward.",
+  "{N} would benefit from a mentor to support development in {p} identified growth areas."
+ ]
+},
+"Customer & Stakeholder Focus": {
+ "exceeds": [
+  "{N} understands customers so deeply that {n} regularly anticipates needs before they are voiced.",
+  "{N} turned two escalated, unhappy clients into references through patient, transparent problem-solving.",
+  "{N} champions the customer's perspective in every internal debate and the product is better for it.",
+  "{N} achieved a {X}% satisfaction score, the highest on the team, while handling the most complex accounts.",
+  "{N} builds trust with stakeholders quickly and maintains it through consistent follow-through.",
+  "{N} balances customer requests against business constraints with excellent judgement.",
+  "{N} has received unsolicited praise from clients on {X} separate occasions this year."
+ ],
+ "meets": [
+  "{N} responds to customer and stakeholder needs promptly and professionally.",
+  "{N} understands the requirements of {p} stakeholders and delivers against them.",
+  "{N} handles complaints calmly and resolves them appropriately.",
+  "{N} keeps customers informed about progress and changes.",
+  "{N} maintains positive relationships with key contacts.",
+  "{N} seeks customer feedback and shares relevant insights with the team.",
+  "{N} represents the company well in external interactions."
+ ],
+ "needs": [
+  "{N} has left customer queries unanswered for longer than our service standard on several occasions.",
+  "{N} sometimes prioritises internal convenience over the customer's experience; reversing that default is the goal.",
+  "{N} should gather stakeholder requirements more thoroughly before starting work.",
+  "{N} needs to manage expectations more carefully; over-promising has created avoidable disappointment.",
+  "{N} could improve by following up after issues are resolved to confirm satisfaction.",
+  "{N} should escalate difficult customer situations earlier rather than letting them escalate on their own.",
+  "{N} would benefit from shadowing top-performing colleagues on client calls."
+ ]
+},
+"Time Management & Focus": {
+ "exceeds": [
+  "{N} protects deep-work time fiercely and produces more in four focused hours than most do in a day.",
+  "{N} prioritises with precision, always working on the thing that matters most right now.",
+  "{N} runs the most efficient meetings on the team: clear agenda, decisions made, done early.",
+  "{N} manages a heavy workload without visible stress and never lets urgent noise displace important work.",
+  "{N} introduced a planning system that the whole team has since adopted.",
+  "{N} estimates accurately and plans buffers realistically, so {p} schedules are trusted.",
+  "{N} eliminated {X} recurring low-value tasks this year, freeing hours every week."
+ ],
+ "meets": [
+  "{N} manages {p} time effectively and meets deadlines.",
+  "{N} prioritises tasks sensibly and adjusts when priorities change.",
+  "{N} arrives prepared and uses meeting time productively.",
+  "{N} maintains focus on assigned work with minimal supervision.",
+  "{N} plans {p} week and communicates capacity accurately.",
+  "{N} handles interruptions without losing track of core work.",
+  "{N} completes routine tasks efficiently."
+ ],
+ "needs": [
+  "{N} frequently works on lower-priority tasks while critical items slip; a daily priority check is needed.",
+  "{N} is often distracted during focused work periods; reducing notifications and batching messages is recommended.",
+  "{N} underestimates how long tasks take, which cascades into missed deadlines.",
+  "{N} spends excessive time in meetings that {n} does not need to attend.",
+  "{N} should block dedicated time for deep work rather than fitting it around everything else.",
+  "{N} tends to procrastinate on complex tasks; breaking them into smaller steps will help.",
+  "{N} needs to say no or negotiate scope more often instead of accepting every request."
+ ]
+},
+"Adaptability & Resilience": {
+ "exceeds": [
+  "{N} thrives in change; when the reorganisation hit, {n} stabilised the team within days.",
+  "{N} responds to setbacks with composure and a plan, and others calm down because {n} does.",
+  "{N} adopted three new systems this year and became the team's expert in each within weeks.",
+  "{N} reprioritises gracefully when circumstances shift, without losing sight of long-term goals.",
+  "{N} maintained high performance through a period of significant personal and team disruption.",
+  "{N} sees change as an opportunity and helps colleagues see it that way too.",
+  "{N} is the person leadership relies on when the plan falls apart."
+ ],
+ "meets": [
+  "{N} adapts to changing priorities and new processes reasonably quickly.",
+  "{N} remains professional and productive under pressure.",
+  "{N} is open to new ways of working when the case is explained.",
+  "{N} recovers from setbacks and continues to deliver.",
+  "{N} handles ambiguity without needing constant reassurance.",
+  "{N} supports colleagues through periods of change.",
+  "{N} learns new tools and systems with appropriate support."
+ ],
+ "needs": [
+  "{N} resists changes to established processes even when the benefits are clear.",
+  "{N} becomes visibly stressed under pressure in ways that affect the team's mood; stress-management support is recommended.",
+  "{N} takes longer than expected to adjust to new priorities and needs frequent re-clarification.",
+  "{N} tends to dwell on setbacks rather than moving to solutions.",
+  "{N} should approach new tools with more openness; reluctance has slowed team adoption.",
+  "{N} needs more comfort with ambiguity; waiting for complete information is delaying decisions.",
+  "{N} would benefit from a resilience or change-management workshop this quarter."
+ ]
+},
+"Innovation & Creativity": {
+ "exceeds": [
+  "{N} generates original ideas at a rate that is frankly unusual, and knows which ones are worth pursuing.",
+  "{N}'s proposal for {X} became one of the company's most impactful initiatives this year.",
+  "{N} challenges assumptions constructively and has changed how the team approaches its core work.",
+  "{N} connects ideas from unrelated fields to solve problems that were stuck for months.",
+  "{N} prototypes quickly, tests honestly and kills bad ideas fast, which is exactly what innovation requires.",
+  "{N} creates an environment where colleagues feel safe to propose unconventional ideas.",
+  "{N} turned a customer complaint into a new feature that is now a competitive differentiator."
+ ],
+ "meets": [
+  "{N} contributes useful ideas for improving products and processes.",
+  "{N} is open to experimenting with new approaches.",
+  "{N} finds practical solutions to everyday problems.",
+  "{N} engages constructively in brainstorming and planning sessions.",
+  "{N} builds on others' ideas effectively.",
+  "{N} applies creative thinking within the constraints of {p} role.",
+  "{N} keeps up with new developments relevant to {p} work."
+ ],
+ "needs": [
+  "{N} tends to default to the established way of doing things; we would like to see more experimentation.",
+  "{N} rarely contributes ideas in planning sessions; preparing one suggestion per meeting is a good start.",
+  "{N} is quick to dismiss unconventional ideas from others, which dampens team creativity.",
+  "{N} should allocate time each week to explore improvements rather than only executing assigned tasks.",
+  "{N} generates ideas but rarely follows through to test them; picking one and running a small pilot is recommended.",
+  "{N} would benefit from exposure to how other teams and companies approach similar problems.",
+  "{N} needs to balance creativity with feasibility; several proposals this cycle were not practical to implement."
+ ]
+}
+}
+}
