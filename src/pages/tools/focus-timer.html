@@ -1,0 +1,44 @@
+<!--META {"title":"Focus Timer (Pomodoro) — Deep Work Sessions with Stats","description":"Free online focus timer with Pomodoro, 52/17 and 90-minute deep work presets. Tracks focused minutes and sessions today. Works in the browser tab with sound and notifications.","url":"/tools/focus-timer/","section":"Tool","tags":"pomodoro timer focus timer deep work online productivity"} -->
+<div class="wrap"><p class="breadcrumb"><a href="/">Home</a> › <a href="/tools/">Tools</a> › Focus Timer</p></div>
+<section class="tight"><div class="wrap">
+  <span class="eyebrow">Free tool</span>
+  <h1>Focus Timer</h1>
+  <p class="lead muted" style="max-width:760px">Pick a preset, name the task, start. The tab title counts down so you can switch away, and your focused minutes for today are tallied below.</p>
+  <div class="tool center">
+    <div class="chips" style="justify-content:center"><button class="chip active" data-w="25" data-b="5">Pomodoro 25/5</button><button class="chip" data-w="52" data-b="17">52/17</button><button class="chip" data-w="90" data-b="20">Deep work 90/20</button><button class="chip" data-w="45" data-b="15">45/15</button></div>
+    <input id="ft-task" placeholder="What are you working on?" style="max-width:420px;margin:12px auto;text-align:center">
+    <div class="badge" id="ft-mode">FOCUS</div>
+    <div class="timer" id="ft-time">25:00</div>
+    <div class="bar" style="max-width:420px;margin:0 auto 18px"><div id="ft-bar" style="width:0"></div></div>
+    <div class="tool-actions" style="justify-content:center"><button class="btn btn-primary btn-lg" id="ft-start">Start</button><button class="btn btn-ghost btn-lg" id="ft-reset">Reset</button><button class="btn btn-ghost" id="ft-skip">Skip →</button></div>
+    <div class="grid g3" style="margin-top:24px;gap:12px;text-align:left">
+      <div class="card flat"><span class="muted small">Focused minutes today</span><div class="result-big" id="ft-min">0</div></div>
+      <div class="card flat"><span class="muted small">Sessions today</span><div class="result-big" id="ft-sess">0</div></div>
+      <div class="card flat"><span class="muted small">All-time focused hours</span><div class="result-big" id="ft-all">0</div></div>
+    </div>
+    <p class="form-note" style="margin-top:12px"><label style="display:inline;font-weight:400"><input type="checkbox" id="ft-sound" checked style="width:auto"> Sound</label> &nbsp; <label style="display:inline;font-weight:400"><input type="checkbox" id="ft-notif" style="width:auto"> Browser notification</label></p>
+  </div>
+</div></section>
+<div class="wrap"><div class="ad-slot leader" data-slot="ft-mid">Advertisement</div></div>
+<section class="tight"><div class="wrap with-side">
+  <article class="prose"><h2>Which interval should you use?</h2><table><tr><th>Preset</th><th>Best for</th></tr><tr><td>25/5 Pomodoro</td><td>Tasks you are avoiding; getting started; admin batches</td></tr><tr><td>52/17</td><td>Steady knowledge work; the ratio observed among top performers in time-tracking data</td></tr><tr><td>90/20 deep work</td><td>Writing, coding, analysis — anything needing a loaded working memory</td></tr></table><p>The interval matters less than the rule: during focus, one task, no inbox. Pair the timer with the <a href="/tools/habit-tracker/">habit tracker</a> and the <a href="/guides/deep-work-schedule/">deep work schedule</a>.</p></article>
+  <aside><div class="ad-slot rect sticky-side" data-slot="ft-side">Advertisement</div></aside>
+</div></section>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id)},W=25,B=5,left=W*60,total=W*60,run=false,mode='focus',tick=null,K='mp-focus';
+var S=(function(){try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return {}}})();var today=new Date().toISOString().slice(0,10);if(S.day!==today){S.day=today;S.min=0;S.sess=0}S.all=S.all||0;
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+function fmt(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function draw(){$('ft-time').textContent=fmt(left);$('ft-bar').style.width=((total-left)/total*100)+'%';document.title=(run?fmt(left)+' · ':'')+(mode==='focus'?'Focus':'Break')+' — MyPerformance.com';$('ft-min').textContent=S.min;$('ft-sess').textContent=S.sess;$('ft-all').textContent=(S.all/60).toFixed(1);$('ft-mode').textContent=mode==='focus'?'FOCUS':'BREAK';$('ft-start').textContent=run?'Pause':(left<total?'Resume':'Start')}
+function beep(){if(!$('ft-sound').checked)return;try{var a=new (window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=880;g.gain.value=.15;o.start();setTimeout(function(){o.stop()},350)}catch(e){}}
+function notify(t){if($('ft-notif').checked&&'Notification' in window&&Notification.permission==='granted')new Notification('MyPerformance Focus Timer',{body:t})}
+function done(){beep();if(mode==='focus'){S.min+=W;S.sess++;S.all+=W;save();notify('Focus session complete. Take a break.');mode='break';total=left=B*60;window.mpTrack&&mpTrack('focus_session',{minutes:W})}else{notify('Break over. Back to focus.');mode='focus';total=left=W*60}run=false;clearInterval(tick);draw()}
+$('ft-start').addEventListener('click',function(){run=!run;if(run){var end=Date.now()+left*1000;tick=setInterval(function(){left=Math.max(0,Math.round((end-Date.now())/1000));if(left<=0)done();else draw()},250)}else clearInterval(tick);draw()});
+$('ft-reset').addEventListener('click',function(){run=false;clearInterval(tick);mode='focus';total=left=W*60;draw()});
+$('ft-skip').addEventListener('click',function(){run=false;clearInterval(tick);if(mode==='focus'){mode='break';total=left=B*60}else{mode='focus';total=left=W*60}draw()});
+document.addEventListener('click',function(e){var c=e.target.closest('.chip[data-w]');if(!c)return;document.querySelectorAll('.chip[data-w]').forEach(function(x){x.classList.remove('active')});c.classList.add('active');W=+c.dataset.w;B=+c.dataset.b;run=false;clearInterval(tick);mode='focus';total=left=W*60;draw()});
+$('ft-notif').addEventListener('change',function(){if(this.checked&&'Notification' in window&&Notification.permission!=='granted')Notification.requestPermission()});
+draw();
+})();
+</script>

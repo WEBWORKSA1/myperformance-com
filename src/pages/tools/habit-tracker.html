@@ -1,0 +1,51 @@
+<!--META {"title":"Habit & Streak Tracker — Free Weekly Habit Grid (Saves in Your Browser)","description":"Track the daily habits behind your performance with a free weekly habit grid. Streaks, completion rate, and private storage in your own browser — no account needed.","url":"/tools/habit-tracker/","section":"Tool","tags":"habit tracker streak daily habits weekly grid productivity"} -->
+<div class="wrap"><p class="breadcrumb"><a href="/">Home</a> › <a href="/tools/">Tools</a> › Habit Tracker</p></div>
+<section class="tight"><div class="wrap">
+  <span class="eyebrow">Free tool · saved privately in your browser</span>
+  <h1>Habit &amp; Streak Tracker</h1>
+  <p class="lead muted" style="max-width:760px">Performance is the sum of what you do on ordinary Tuesdays. Add up to eight habits, tap the days you complete them, and watch your streaks and completion rate. Data is stored only on this device.</p>
+  <div class="tool">
+    <div class="inline-form" style="margin-bottom:18px"><input id="ht-new" placeholder="Add a habit, e.g. 90 min deep work before email" maxlength="60"><button class="btn btn-primary" id="ht-add">Add habit</button></div>
+    <div class="chips"><span class="muted small" style="align-self:center">Quick add:</span><button class="chip" data-q="Deep work block (90 min)">Deep work block</button><button class="chip" data-q="Plan top 3 priorities">Plan top 3</button><button class="chip" data-q="Inbox closed until 11am">Inbox closed until 11</button><button class="chip" data-q="Log one achievement">Log one achievement</button><button class="chip" data-q="Exercise 30 min">Exercise 30 min</button><button class="chip" data-q="Read 20 pages">Read 20 pages</button></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:14px 0"><button class="btn btn-ghost btn-sm" id="ht-prev">← Previous week</button><strong id="ht-week"></strong><button class="btn btn-ghost btn-sm" id="ht-next">Next week →</button></div>
+    <div class="habit-grid" id="ht-grid"></div>
+    <div class="grid g3" style="margin-top:20px;gap:12px">
+      <div class="card flat"><span class="muted small">This week's completion</span><div class="result-big" id="ht-rate">0%</div></div>
+      <div class="card flat"><span class="muted small">Longest current streak</span><div class="result-big" id="ht-streak">0</div><span class="small">days</span></div>
+      <div class="card flat"><span class="muted small">Total check-ins</span><div class="result-big" id="ht-total">0</div></div>
+    </div>
+    <div class="tool-actions"><button class="btn btn-ghost btn-sm" id="ht-export">Export data (JSON)</button><button class="btn btn-ghost btn-sm" id="ht-reset">Reset all</button></div>
+  </div>
+</div></section>
+<div class="wrap"><div class="ad-slot leader" data-slot="ht-mid">Advertisement</div></div>
+<section class="tight"><div class="wrap with-side">
+  <article class="prose"><h2>Choosing habits that actually move your performance</h2><p>Track <strong>inputs you control</strong>, not outcomes you hope for. "Close two deals" is a goal; "make 10 outbound calls before lunch" is a habit. Limit yourself to three or four at first — completion rate matters more than ambition, because a visible streak is what keeps you coming back.</p><h3>Habits with the highest performance payoff</h3><ul><li>A protected 90-minute deep-work block before opening email.</li><li>Writing down the day's top three priorities the night before.</li><li>Logging one achievement with a number each day — your <a href="/tools/self-evaluation-generator/">self-evaluation</a> writes itself.</li><li>A 15-minute weekly review every Friday.</li></ul><p>See <a href="/guides/deep-work-schedule/">the deep work schedule</a> and <a href="/guides/weekly-review-system/">the weekly review system</a>.</p></article>
+  <aside><div class="ad-slot rect sticky-side" data-slot="ht-side">Advertisement</div></aside>
+</div></section>
+<script>
+(function(){
+var KEY='mp-habits',$=function(id){return document.getElementById(id)};
+var S=load(),offset=0;
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{habits:[],done:{}}}catch(e){return {habits:[],done:{}}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function monday(o){var d=new Date();d.setHours(0,0,0,0);var day=(d.getDay()+6)%7;d.setDate(d.getDate()-day+o*7);return d}
+function key(d){return d.toISOString().slice(0,10)}
+function render(){var m=monday(offset),days=[];for(var i=0;i<7;i++){var d=new Date(m);d.setDate(m.getDate()+i);days.push(d)}
+var end=new Date(m);end.setDate(m.getDate()+6);$('ht-week').textContent=m.toLocaleDateString(undefined,{month:'short',day:'numeric'})+' – '+end.toLocaleDateString(undefined,{month:'short',day:'numeric'});
+var today=key(new Date()),h='<div></div>'+days.map(function(d){return '<div class="center small'+(key(d)===today?'" style="color:var(--brand);font-weight:800':'')+'">'+d.toLocaleDateString(undefined,{weekday:'short'}).slice(0,2)+'<br>'+d.getDate()+'</div>'}).join('');
+if(!S.habits.length)h+='<div class="muted small" style="grid-column:1/-1;padding:20px 0">No habits yet. Add one above or use a quick-add chip.</div>';
+S.habits.forEach(function(name,hi){h+='<div style="display:flex;justify-content:space-between;align-items:center;gap:6px"><span class="small" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(name)+'</span><button class="chip" style="padding:2px 8px" data-del="'+hi+'" aria-label="Delete">×</button></div>';days.forEach(function(d){var k=hi+'|'+key(d);h+='<div class="cell'+(S.done[k]?' done':'')+'" data-k="'+k+'" role="button" aria-label="'+esc(name)+' '+key(d)+'"></div>'})});
+$('ht-grid').innerHTML=h;stats(days);}
+function stats(days){var total=0,possible=S.habits.length*7,week=0;Object.keys(S.done).forEach(function(k){if(S.done[k])total++});S.habits.forEach(function(_,hi){days.forEach(function(d){if(S.done[hi+'|'+key(d)])week++})});
+$('ht-rate').textContent=(possible?Math.round(week/possible*100):0)+'%';$('ht-total').textContent=total;
+var best=0;S.habits.forEach(function(_,hi){var s=0,d=new Date();d.setHours(0,0,0,0);if(!S.done[hi+'|'+key(d)])d.setDate(d.getDate()-1);while(S.done[hi+'|'+key(d)]){s++;d.setDate(d.getDate()-1)}best=Math.max(best,s)});$('ht-streak').textContent=best;}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function add(n){n=(n||'').trim();if(!n||S.habits.length>=8)return;S.habits.push(n);save();render();$('ht-new').value=''}
+$('ht-add').addEventListener('click',function(){add($('ht-new').value)});$('ht-new').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();add($('ht-new').value)}});
+document.addEventListener('click',function(e){var q=e.target.closest('[data-q]');if(q)add(q.dataset.q);var c=e.target.closest('.cell');if(c){S.done[c.dataset.k]=!S.done[c.dataset.k];save();render();window.mpTrack&&mpTrack('habit_check')}var del=e.target.closest('[data-del]');if(del&&confirm('Delete this habit and its history?')){var hi=+del.dataset.del;var nd={};Object.keys(S.done).forEach(function(k){var p=k.split('|'),i=+p[0];if(i===hi)return;nd[(i>hi?i-1:i)+'|'+p[1]]=S.done[k]});S.done=nd;S.habits.splice(hi,1);save();render()}});
+$('ht-prev').addEventListener('click',function(){offset--;render()});$('ht-next').addEventListener('click',function(){offset++;render()});
+$('ht-export').addEventListener('click',function(){var a=document.createElement('a');a.href='data:application/json,'+encodeURIComponent(JSON.stringify(S,null,2));a.download='my-habits.json';a.click()});
+$('ht-reset').addEventListener('click',function(){if(confirm('Delete all habits and history on this device?')){S={habits:[],done:{}};save();render()}});
+render();
+})();
+</script>
