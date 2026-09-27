@@ -137,7 +137,7 @@ def layout(meta, body):
     desc = html.escape(meta.get("description", ""))
     url = SITE + meta["url"]
     schema = meta.get("schema")
-    schema_html = f'<script type="application/ld+json">{json.dumps(schema)}</script>' if schema else ""
+    schema_html = f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>' if schema else ""
     org = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE,
            "potentialAction": {"@type": "SearchAction", "target": SITE + "/search/?q={search_term_string}", "query-input": "required name=search_term_string"}}
     band = "" if meta.get("no_band") else '<div data-shell="band"></div>'
