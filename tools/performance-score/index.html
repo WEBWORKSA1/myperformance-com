@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Performance Score Quiz — Rate Your Work Performance in 3 Minutes | MyPerformance.com</title>
+<meta name="description" content="Free 24-question performance self-assessment. Get a score out of 100 across 8 dimensions (results, quality, ownership, collaboration, communication, growth, reliability, focus) and a prioritised improvement plan.">
+<link rel="canonical" href="https://webworksa1.github.io/myperformance-com/tools/performance-score/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MyPerformance.com"><meta property="og:title" content="Performance Score Quiz — Rate Your Work Performance in 3 Minutes"><meta property="og:description" content="Free 24-question performance self-assessment. Get a score out of 100 across 8 dimensions (results, quality, ownership, collaboration, communication, growth, reliability, focus) and a prioritised improvement plan."><meta property="og:url" content="https://webworksa1.github.io/myperformance-com/tools/performance-score/"><meta property="og:image" content="https://webworksa1.github.io/myperformance-com/assets/img/og-cover.svg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Performance Score Quiz — Rate Your Work Performance in 3 Minutes"><meta name="twitter:description" content="Free 24-question performance self-assessment. Get a score out of 100 across 8 dimensions (results, quality, ownership, collaboration, communication, growth, reliability, focus) and a prioritised improvement plan."><meta name="twitter:image" content="https://webworksa1.github.io/myperformance-com/assets/img/og-cover.svg">
+<meta name="theme-color" content="#1e3a8a">
+<link rel="icon" href="/myperformance-com/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/myperformance-com/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/myperformance-com/assets/css/main.css">
+<script>window.MP_BASE="/myperformance-com";</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "MyPerformance.com", "url": "https://webworksa1.github.io/myperformance-com", "potentialAction": {"@type": "SearchAction", "target": "https://webworksa1.github.io/myperformance-com/search/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+
+</head>
+<body>
+<div class="topbar">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership → <a href="https://web.works/contact" target="_blank" rel="noopener">web.works/contact</a></div>
+<header class="header">
+  <div class="wrap nav">
+    <a class="logo" href="/myperformance-com/" aria-label="MyPerformance.com home"><span class="mark">MP</span><span>My<b>Performance</b><i class="dom">.com</i></span></a>
+    <nav aria-label="Main" data-shell="menu"><ul class="menu"></ul></nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="/myperformance-com/search/" aria-label="Search">🔍</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">◐</button>
+      <a class="btn btn-primary btn-sm" href="/myperformance-com/coaching/">Free performance audit</a>
+      <button class="burger" data-burger aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap"><p class="breadcrumb"><a href="/myperformance-com/">Home</a> › <a href="/myperformance-com/tools/">Tools</a> › Performance Score Quiz</p></div>
+<section class="tight"><div class="wrap">
+  <span class="eyebrow">Free assessment · 24 questions · about 3 minutes</span>
+  <h1>What's your Performance Score?</h1>
+  <p class="lead muted" style="max-width:760px">Rate yourself honestly on 24 statements. You get a score out of 100, a breakdown across 8 dimensions, and the three actions most likely to raise it. Your answers stay in your browser.</p>
+  <div class="tool">
+    <div id="ps-quiz">
+      <div class="bar" style="margin-bottom:18px"><div id="ps-bar" style="width:0"></div></div>
+      <div id="ps-q"></div>
+      <div class="tool-actions" style="justify-content:space-between"><button class="btn btn-ghost" id="ps-prev" type="button">← Back</button><span class="muted small" id="ps-pos"></span><button class="btn btn-primary" id="ps-next" type="button">Next →</button></div>
+    </div>
+    <div id="ps-result" style="display:none">
+      <div class="grid g2" style="align-items:center;gap:32px">
+        <div class="center"><div class="score-ring" id="ps-ring"><div id="ps-score">0</div></div><h3 id="ps-label"></h3><p class="muted" id="ps-desc"></p></div>
+        <div id="ps-dims" style="display:grid;gap:10px"></div>
+      </div>
+      <h3 style="margin-top:28px">Your three priority actions</h3>
+      <ol id="ps-actions"></ol>
+      <div class="leadgen" style="padding:28px;margin-top:20px">
+        <div class="grid g2" style="align-items:center">
+          <div><h3>Want the full report and a 30-day plan?</h3><p>Get your detailed breakdown with recommended guides, tools and templates for each weak dimension — free by email.</p></div>
+          <form class="form" data-form="performance-score-report"><input type="text" name="_honey" class="hp" tabindex="-1"><input type="hidden" name="score" id="ps-hidden"><input type="hidden" name="weakest" id="ps-hidden-weak"><input type="email" name="email" placeholder="Email address" required aria-label="Email"><button class="btn btn-accent btn-block" type="submit">Send my full report</button><p class="form-note" style="color:#cbd5e1">Also subscribes you to the weekly Performance Brief. Unsubscribe any time.</p><div class="form-success">Sent! Check your inbox shortly.</div></form>
+        </div>
+      </div>
+      <div class="tool-actions"><button class="btn btn-ghost" onclick="location.reload()">Retake</button><button class="btn btn-ghost" onclick="mpCopy('#ps-summary',this)">Copy summary</button><a class="btn btn-ghost" data-share="linkedin" href="#">Share on LinkedIn</a></div>
+      <pre id="ps-summary" style="display:none"></pre>
+    </div>
+  </div>
+  <p class="form-note" style="margin-top:12px">This assessment is a self-reflection tool, not a validated psychometric instrument or a substitute for feedback from your manager or peers. See the <a href="/myperformance-com/legal/disclaimer/">disclaimer</a>.</p>
+</div></section>
+<div class="wrap"><div class="ad-slot leader" data-slot="ps-mid">Advertisement</div></div>
+<section class="tight"><div class="wrap with-side">
+  <article class="prose">
+    <h2>The eight dimensions of work performance</h2>
+    <p>Performance frameworks used by large organisations tend to converge on the same handful of dimensions, whatever they call them. We use eight: <strong>Results</strong> (do you deliver outcomes?), <strong>Quality</strong> (is the work right the first time?), <strong>Ownership</strong> (do you take responsibility?), <strong>Collaboration</strong> (do others do better because of you?), <strong>Communication</strong> (are stakeholders informed and aligned?), <strong>Growth</strong> (are you measurably better than a year ago?), <strong>Reliability</strong> (can people plan around you?) and <strong>Focus</strong> (does your time go where it matters?).</p>
+    <h3>How to read your score</h3>
+    <ul><li><strong>85–100</strong> — top-performer territory. Your risk is invisibility: make sure the evidence is documented. Use the <a href="/myperformance-com/tools/self-evaluation-generator/">self-evaluation generator</a>.</li><li><strong>70–84</strong> — solid. One or two dimensions are holding you back; fix the lowest first.</li><li><strong>55–69</strong> — inconsistent. Pick one habit from your priority actions and run it for 30 days with the <a href="/myperformance-com/tools/habit-tracker/">habit tracker</a>.</li><li><strong>Below 55</strong> — something structural is wrong: role fit, workload, clarity or environment. Read <a href="/myperformance-com/guides/kpis-for-personal-performance/">12 KPIs to track your performance</a> and have a frank conversation with your manager.</li></ul>
+  </article>
+  <aside><div class="ad-slot rect sticky-side" data-slot="ps-side">Advertisement</div></aside>
+</div></section>
+<script>
+(function(){
+var D=['Results','Quality','Ownership','Collaboration','Communication','Growth','Reliability','Focus'];
+var Q=[
+[0,'I finish the work that matters most each week, not just the work that is easiest.'],[0,'I can name the measurable results I produced in the last 90 days.'],[0,'When my work is done, something is clearly better for a customer or colleague.'],
+[1,'My work rarely needs to be corrected or redone by someone else.'],[1,'I check my own work carefully before I hand it over.'],[1,'I understand what "good" looks like before I start a task.'],
+[2,'When something goes wrong in my area, I say so first and propose a fix.'],[2,'I do not wait to be told what to do next.'],[2,'I follow through on commitments even when no one is checking.'],
+[3,'Colleagues would say they do better work because I am on the team.'],[3,'I share information and credit freely.'],[3,'I handle disagreement without it becoming personal.'],
+[4,'The people who depend on my work always know its status.'],[4,'My written updates are short, clear and lead with the point.'],[4,'I ask clarifying questions before starting rather than guessing.'],
+[5,'I can point to a skill I am measurably better at than a year ago.'],[5,'I actively ask for feedback and act on it.'],[5,'I spend time each week learning something relevant to my role.'],
+[6,'I meet deadlines I agree to, or renegotiate them early.'],[6,'I keep track of my commitments so nothing is forgotten.'],[6,'People can plan around what I say I will do.'],
+[7,'I protect blocks of uninterrupted time for my most important work.'],[7,'I know what my top three priorities are on any given day.'],[7,'I say no, or negotiate scope, when a request threatens more important work.']
+];
+var A=[
+['Results','Write down the three outcomes your role exists to produce, then score each week against them. Read: <a href="/myperformance-com/guides/kpis-for-personal-performance/">12 KPIs for personal performance</a>.'],
+['Quality','Add a 5-minute self-review checklist before every handoff. Template: <a href="/myperformance-com/templates/performance-review/">quality criteria in the review template</a>.'],
+['Ownership','For 30 days, be the first to report every problem in your area with a proposed fix attached. Read: <a href="/myperformance-com/guides/how-to-get-promoted/">how to get promoted</a>.'],
+['Collaboration','Book one 20-minute conversation per week with a colleague you rarely talk to, and ask what would make their work easier.'],
+['Communication','Send a Friday status note to everyone who depends on you: done, next, blocked. Use the <a href="/myperformance-com/tools/one-on-one-agenda/">1:1 agenda builder</a> for manager check-ins.'],
+['Growth','Set one <a href="/myperformance-com/tools/smart-goal-builder/">SMART development goal</a> and ask two people for specific feedback this month.'],
+['Reliability','Keep a single list of commitments and review it every morning. Track it with the <a href="/myperformance-com/tools/habit-tracker/">habit tracker</a>.'],
+['Focus','Block two 90-minute deep-work sessions per day and run them with the <a href="/myperformance-com/tools/focus-timer/">focus timer</a>. Read: <a href="/myperformance-com/guides/deep-work-schedule/">the deep work schedule</a>.']];
+var i=0,ans=new Array(Q.length).fill(null);
+var L=['Rarely','Sometimes','Often','Usually','Always'];
+function show(){var q=Q[i];document.getElementById('ps-q').innerHTML='<h3 style="min-height:64px"><span class="badge" style="margin-right:8px">'+D[q[0]]+'</span><br>'+q[1]+'</h3><div class="likert">'+L.map(function(l,k){return '<label><input type="radio" name="q'+i+'" value="'+(k+1)+'"'+(ans[i]===k+1?' checked':'')+'><span>'+l+'</span></label>'}).join('')+'</div>';document.getElementById('ps-pos').textContent=(i+1)+' / '+Q.length;document.getElementById('ps-bar').style.width=(i/Q.length*100)+'%';document.getElementById('ps-prev').style.visibility=i?'visible':'hidden';document.getElementById('ps-next').textContent=i===Q.length-1?'See my score →':'Next →';}
+document.getElementById('ps-q').addEventListener('change',function(e){ans[i]=parseInt(e.target.value);if(i<Q.length-1){setTimeout(function(){i++;show()},220)}});
+document.getElementById('ps-next').addEventListener('click',function(){if(ans[i]===null){alert('Pick an answer to continue.');return}if(i<Q.length-1){i++;show()}else finish()});
+document.getElementById('ps-prev').addEventListener('click',function(){if(i>0){i--;show()}});
+function finish(){var dims=D.map(function(){return 0});Q.forEach(function(q,k){dims[q[0]]+=ans[k]});var pct=dims.map(function(s){return Math.round((s-3)/12*100)});var total=Math.round(pct.reduce(function(a,b){return a+b},0)/8);
+document.getElementById('ps-quiz').style.display='none';document.getElementById('ps-result').style.display='block';var r=document.getElementById('ps-ring'),s=document.getElementById('ps-score'),v=0,t=setInterval(function(){v++;r.style.setProperty('--p',v);s.textContent=v;if(v>=total)clearInterval(t)},14);
+var lab=total>=85?['Top performer','Your risk is invisibility. Document the evidence and make sure your manager sees it.']:total>=70?['Solid performer','One or two dimensions are holding you back. Fix the lowest first — that is where the leverage is.']:total>=55?['Inconsistent','You have real strengths, but they are undermined by weak spots. One habit, 30 days.']:['Under pressure','Something structural needs to change: clarity, workload, or fit. Start with a frank conversation.'];
+document.getElementById('ps-label').textContent=lab[0]+' · '+total+'/100';document.getElementById('ps-desc').textContent=lab[1];
+var order=pct.map(function(p,k){return [p,k]}).sort(function(a,b){return a[0]-b[0]});
+document.getElementById('ps-dims').innerHTML=D.map(function(d,k){return '<div><div class="small" style="display:flex;justify-content:space-between"><span>'+d+'</span><b>'+pct[k]+'</b></div><div class="bar"><div style="width:'+pct[k]+'%;background:'+(pct[k]<50?'var(--danger)':pct[k]<75?'var(--accent)':'var(--ok)')+'"></div></div></div>'}).join('');
+document.getElementById('ps-actions').innerHTML=order.slice(0,3).map(function(x){return '<li><strong>'+A[x[1]][0]+' ('+x[0]+'/100):</strong> '+A[x[1]][1]+'</li>'}).join('');
+document.getElementById('ps-hidden').value=total;document.getElementById('ps-hidden-weak').value=order.slice(0,3).map(function(x){return D[x[1]]}).join(', ');
+document.getElementById('ps-summary').textContent='My Performance Score: '+total+'/100 ('+lab[0]+')\n'+D.map(function(d,k){return d+': '+pct[k]}).join('\n')+'\nTake the quiz: https://myperformance.com/tools/performance-score/';
+window.mpTrack&&mpTrack('quiz_complete',{score:total});}
+show();
+})();
+</script>
+
+</main>
+<div data-shell="band"></div>
+<div data-shell="footer"></div>
+<div data-shell="modal"></div>
+<script src="/myperformance-com/assets/js/shell.js" defer></script>
+<script src="/myperformance-com/assets/js/main.js" defer></script>
+
+</body>
+</html>
