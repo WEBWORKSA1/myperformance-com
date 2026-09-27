@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://webworksa1.github.io/myperformance-com/sitemap.xml
