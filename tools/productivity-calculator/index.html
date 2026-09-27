@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Productivity Calculator — Find Your Real Focus Hours &amp; Meeting Cost | MyPerformance.com</title>
+<meta name="description" content="Calculate your true weekly focus hours, the hourly cost of your meetings, and how much time you can recover. Free productivity calculator with a personalised recovery plan.">
+<link rel="canonical" href="https://webworksa1.github.io/myperformance-com/tools/productivity-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MyPerformance.com"><meta property="og:title" content="Productivity Calculator — Find Your Real Focus Hours &amp; Meeting Cost"><meta property="og:description" content="Calculate your true weekly focus hours, the hourly cost of your meetings, and how much time you can recover. Free productivity calculator with a personalised recovery plan."><meta property="og:url" content="https://webworksa1.github.io/myperformance-com/tools/productivity-calculator/"><meta property="og:image" content="https://webworksa1.github.io/myperformance-com/assets/img/og-cover.svg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Productivity Calculator — Find Your Real Focus Hours &amp; Meeting Cost"><meta name="twitter:description" content="Calculate your true weekly focus hours, the hourly cost of your meetings, and how much time you can recover. Free productivity calculator with a personalised recovery plan."><meta name="twitter:image" content="https://webworksa1.github.io/myperformance-com/assets/img/og-cover.svg">
+<meta name="theme-color" content="#1e3a8a">
+<link rel="icon" href="/myperformance-com/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/myperformance-com/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/myperformance-com/assets/css/main.css">
+<script>window.MP_BASE="/myperformance-com";</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "MyPerformance.com", "url": "https://webworksa1.github.io/myperformance-com", "potentialAction": {"@type": "SearchAction", "target": "https://webworksa1.github.io/myperformance-com/search/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+
+</head>
+<body>
+<div class="topbar">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership → <a href="https://web.works/contact" target="_blank" rel="noopener">web.works/contact</a></div>
+<header class="header">
+  <div class="wrap nav">
+    <a class="logo" href="/myperformance-com/" aria-label="MyPerformance.com home"><span class="mark">MP</span><span>My<b>Performance</b><i class="dom">.com</i></span></a>
+    <nav aria-label="Main" data-shell="menu"><ul class="menu"></ul></nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="/myperformance-com/search/" aria-label="Search">🔍</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">◐</button>
+      <a class="btn btn-primary btn-sm" href="/myperformance-com/coaching/">Free performance audit</a>
+      <button class="burger" data-burger aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap"><p class="breadcrumb"><a href="/myperformance-com/">Home</a> › <a href="/myperformance-com/tools/">Tools</a> › Productivity Calculator</p></div>
+<section class="tight"><div class="wrap">
+  <span class="eyebrow">Free calculator</span>
+  <h1>Productivity Calculator</h1>
+  <p class="lead muted" style="max-width:760px">Most knowledge workers get fewer than 12 hours of real focused work per week. Enter an honest picture of your week to see your focus ratio, what your meetings cost, and where the recoverable hours are.</p>
+  <div class="tool"><div class="grid g2" style="gap:32px">
+    <form class="form" id="pc" onsubmit="return false">
+      <div class="form-row"><div><label>Hours worked per week</label><input id="pc-hours" type="number" value="42" min="1" max="100"></div><div><label>Hours in meetings per week</label><input id="pc-meet" type="number" value="14" min="0" max="80"></div></div>
+      <div class="form-row"><div><label>Hours on email / chat per week</label><input id="pc-comm" type="number" value="9" min="0" max="80"></div><div><label>Admin, reporting, misc. per week</label><input id="pc-admin" type="number" value="5" min="0" max="80"></div></div>
+      <div><label>Interruptions per focus hour: <output id="pc-int-o">3</output></label><div class="range-row"><input type="range" id="pc-int" min="0" max="10" value="3"></div><p class="form-note">Each interruption costs ~10 minutes of refocus time, per attention-research estimates.</p></div>
+      <div><label>Meetings you could skip or shorten (%): <output id="pc-skip-o">30</output>%</label><div class="range-row"><input type="range" id="pc-skip" min="0" max="80" value="30"></div></div>
+      <div class="form-row"><div><label>Your annual salary (optional, for cost)</label><input id="pc-sal" type="number" placeholder="75000"></div><div><label>Currency</label><input id="pc-cur" value="$" maxlength="4"></div></div>
+    </form>
+    <div>
+      <div class="grid g2" style="gap:12px">
+        <div class="card flat"><span class="muted small">Real focus hours / week</span><div class="result-big" id="pc-focus">—</div><span class="small" id="pc-ratio"></span></div>
+        <div class="card flat"><span class="muted small">Recoverable hours / week</span><div class="result-big" id="pc-rec" style="color:var(--ok)">—</div><span class="small" id="pc-recyr"></span></div>
+      </div>
+      <div class="card flat" style="margin-top:12px"><h4>Where your week goes</h4><div id="pc-bars" style="display:grid;gap:8px"></div></div>
+      <div class="notice" id="pc-cost" style="margin-top:12px;display:none"></div>
+      <div class="card flat" style="margin-top:12px"><h4>Your recovery plan</h4><ol id="pc-plan" class="small" style="margin:0;padding-left:1.2em"></ol></div>
+      <div class="tool-actions"><button class="btn btn-primary" onclick="mpCopy('#pc-summary',this)">Copy summary</button><a class="btn btn-ghost" href="/myperformance-com/tools/focus-timer/">Start a focus session →</a></div><pre id="pc-summary" style="display:none"></pre>
+    </div>
+  </div></div>
+</div></section>
+<div class="wrap"><div class="ad-slot leader" data-slot="pc-mid">Advertisement</div></div>
+<section class="tight"><div class="wrap with-side">
+  <article class="prose">
+    <h2>Focus ratio: the metric nobody tracks and everybody feels</h2>
+    <p>Your <strong>focus ratio</strong> is the share of working hours spent on uninterrupted, cognitively demanding work — the work that actually shows up in performance reviews. Below 30% and you are mostly coordinating other people's work; above 50% is rare outside of protected roles. Improving it by even 10 points is usually worth more than any productivity app.</p>
+    <h3>The three levers, in order of payoff</h3>
+    <ol><li><strong>Meetings.</strong> Decline, shorten to 25 minutes, or convert to written updates. Most people can recover 20–40% of meeting time with no loss of outcomes.</li><li><strong>Interruptions.</strong> Batch messages into two or three windows a day. Each avoided interruption returns roughly 10 minutes of refocus time.</li><li><strong>Admin.</strong> Automate or template the recurring pieces; a single afternoon of setup often saves an hour a week forever.</li></ol>
+    <p>Then protect what you recovered with a <a href="/myperformance-com/guides/deep-work-schedule/">deep work schedule</a> and the <a href="/myperformance-com/tools/focus-timer/">focus timer</a>.</p>
+  </article>
+  <aside><div class="ad-slot rect sticky-side" data-slot="pc-side">Advertisement</div></aside>
+</div></section>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id)};
+function calc(){var h=+$('pc-hours').value||0,m=+$('pc-meet').value||0,c=+$('pc-comm').value||0,a=+$('pc-admin').value||0,it=+$('pc-int').value,sk=+$('pc-skip').value,sal=+$('pc-sal').value,cur=$('pc-cur').value||'$';
+$('pc-int-o').value=it;$('pc-skip-o').value=sk;
+var avail=Math.max(0,h-m-c-a),lost=Math.min(avail,avail*it*10/60),focus=Math.max(0,avail-lost),ratio=h?focus/h*100:0;
+var rec=m*sk/100+lost*0.5+a*0.3;
+$('pc-focus').textContent=focus.toFixed(1)+'h';$('pc-ratio').textContent='Focus ratio: '+ratio.toFixed(0)+'% '+(ratio<30?'— coordination-heavy':ratio<50?'— typical':'— excellent');
+$('pc-rec').textContent='+'+rec.toFixed(1)+'h';$('pc-recyr').textContent='≈ '+Math.round(rec*46)+' hours a year ('+(rec*46/8).toFixed(0)+' working days)';
+var parts=[['Focus work',focus,'var(--ok)'],['Refocus loss',lost,'var(--danger)'],['Meetings',m,'var(--brand)'],['Email & chat',c,'var(--violet)'],['Admin',a,'var(--accent)']];
+$('pc-bars').innerHTML=parts.map(function(p){return '<div><div class="small" style="display:flex;justify-content:space-between"><span>'+p[0]+'</span><b>'+p[1].toFixed(1)+'h</b></div><div class="bar"><div style="width:'+(h?Math.min(100,p[1]/h*100):0)+'%;background:'+p[2]+'"></div></div></div>'}).join('');
+var cost=$('pc-cost');if(sal>0){var rate=sal/(h*46||1);cost.style.display='block';cost.innerHTML='<strong>Your meetings cost about '+cur+Math.round(m*rate*46).toLocaleString()+' a year</strong> of your salary alone ('+cur+rate.toFixed(0)+'/hour × '+m+'h × 46 weeks). Multiply by attendees for the true cost.'}else cost.style.display='none';
+var plan=[];if(m*sk/100>=1)plan.push('Cut or shorten meetings to recover '+(m*sk/100).toFixed(1)+'h: decline recurring meetings without an agenda, default to 25 minutes.');if(lost>=1)plan.push('Batch email and chat into 2–3 windows to recover ~'+(lost*0.5).toFixed(1)+'h of refocus time.');if(a>=3)plan.push('Template or automate recurring admin to save ~'+(a*0.3).toFixed(1)+'h.');plan.push('Block '+(focus+rec>=15?'two':'one')+' 90-minute deep-work session'+(focus+rec>=15?'s':'')+' per day in your calendar and treat them as meetings with yourself.');
+$('pc-plan').innerHTML=plan.map(function(p){return '<li>'+p+'</li>'}).join('');
+$('pc-summary').textContent='Productivity audit — MyPerformance.com\nHours: '+h+' | Meetings: '+m+' | Comms: '+c+' | Admin: '+a+'\nReal focus hours: '+focus.toFixed(1)+' ('+ratio.toFixed(0)+'%)\nRecoverable: '+rec.toFixed(1)+'h/week\n'+plan.map(function(p,i){return (i+1)+'. '+p}).join('\n');}
+$('pc').addEventListener('input',calc);calc();
+})();
+</script>
+
+</main>
+<div data-shell="band"></div>
+<div data-shell="footer"></div>
+<div data-shell="modal"></div>
+<script src="/myperformance-com/assets/js/shell.js" defer></script>
+<script src="/myperformance-com/assets/js/main.js" defer></script>
+
+</body>
+</html>
