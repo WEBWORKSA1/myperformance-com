@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1:1 Meeting Agenda Builder — Better One-on-Ones in 30 Minutes | MyPerformance.com</title>
+<meta name="description" content="Build a one-on-one meeting agenda in seconds. Choose the meeting type, length and focus areas and get a timed agenda with questions managers and employees both find useful.">
+<link rel="canonical" href="https://webworksa1.github.io/myperformance-com/tools/one-on-one-agenda/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MyPerformance.com"><meta property="og:title" content="1:1 Meeting Agenda Builder — Better One-on-Ones in 30 Minutes"><meta property="og:description" content="Build a one-on-one meeting agenda in seconds. Choose the meeting type, length and focus areas and get a timed agenda with questions managers and employees both find useful."><meta property="og:url" content="https://webworksa1.github.io/myperformance-com/tools/one-on-one-agenda/"><meta property="og:image" content="https://webworksa1.github.io/myperformance-com/assets/img/og-cover.svg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="1:1 Meeting Agenda Builder — Better One-on-Ones in 30 Minutes"><meta name="twitter:description" content="Build a one-on-one meeting agenda in seconds. Choose the meeting type, length and focus areas and get a timed agenda with questions managers and employees both find useful."><meta name="twitter:image" content="https://webworksa1.github.io/myperformance-com/assets/img/og-cover.svg">
+<meta name="theme-color" content="#1e3a8a">
+<link rel="icon" href="/myperformance-com/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/myperformance-com/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/myperformance-com/assets/css/main.css">
+<script>window.MP_BASE="/myperformance-com";</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "MyPerformance.com", "url": "https://webworksa1.github.io/myperformance-com", "potentialAction": {"@type": "SearchAction", "target": "https://webworksa1.github.io/myperformance-com/search/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+
+</head>
+<body>
+<div class="topbar">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership → <a href="https://web.works/contact" target="_blank" rel="noopener">web.works/contact</a></div>
+<header class="header">
+  <div class="wrap nav">
+    <a class="logo" href="/myperformance-com/" aria-label="MyPerformance.com home"><span class="mark">MP</span><span>My<b>Performance</b><i class="dom">.com</i></span></a>
+    <nav aria-label="Main" data-shell="menu"><ul class="menu"></ul></nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="/myperformance-com/search/" aria-label="Search">🔍</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">◐</button>
+      <a class="btn btn-primary btn-sm" href="/myperformance-com/coaching/">Free performance audit</a>
+      <button class="burger" data-burger aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap"><p class="breadcrumb"><a href="/myperformance-com/">Home</a> › <a href="/myperformance-com/tools/">Tools</a> › 1:1 Agenda Builder</p></div>
+<section class="tight"><div class="wrap">
+  <span class="eyebrow">Free tool</span>
+  <h1>1:1 Meeting Agenda Builder</h1>
+  <p class="lead muted" style="max-width:760px">One-on-ones fail when they become status updates. Pick the type, length and focus, and get a timed agenda with questions that surface the things people do not raise on their own.</p>
+  <div class="tool"><div class="grid g2" style="gap:32px">
+    <form class="form" id="oo" onsubmit="return false">
+      <div class="form-row"><div><label>I am the…</label><select id="oo-who"><option value="manager">Manager</option><option value="report">Employee / direct report</option></select></div><div><label>Meeting length</label><select id="oo-len"><option>15</option><option selected>30</option><option>45</option><option>60</option></select></div></div>
+      <div><label>Meeting type</label><select id="oo-type"><option value="weekly">Weekly check-in</option><option value="monthly">Monthly growth conversation</option><option value="review">Pre-review alignment</option><option value="first">First 1:1 with a new report / manager</option><option value="skip">Skip-level 1:1</option></select></div>
+      <div><label>Focus areas (pick any)</label><div class="chips" id="oo-focus"><button type="button" class="chip active" data-f="wins">Wins</button><button type="button" class="chip active" data-f="blockers">Blockers</button><button type="button" class="chip" data-f="priorities">Priorities</button><button type="button" class="chip" data-f="feedback">Feedback (both ways)</button><button type="button" class="chip" data-f="growth">Career growth</button><button type="button" class="chip" data-f="wellbeing">Workload &amp; wellbeing</button><button type="button" class="chip" data-f="team">Team dynamics</button></div></div>
+      <div class="form-row"><div><label>Names (optional)</label><input id="oo-names" placeholder="Sam & Jordan"></div><div><label>Date</label><input id="oo-date" type="date"></div></div>
+    </form>
+    <div><label>Agenda</label><div class="output" id="oo-out" style="min-height:420px"></div><div class="tool-actions"><button class="btn btn-primary" onclick="mpCopy('#oo-out',this)">Copy</button><button class="btn btn-ghost" onclick="mpDownload('#oo-out','one-on-one-agenda.txt')">Download</button><a class="btn btn-ghost" href="/myperformance-com/templates/one-on-one-meeting/">Printable template →</a></div></div>
+  </div></div>
+</div></section>
+<div class="wrap"><div class="ad-slot leader" data-slot="oo-mid">Advertisement</div></div>
+<section class="tight"><div class="wrap with-side">
+  <article class="prose"><h2>Rules for a one-on-one that people actually want</h2><ul><li><strong>It is the report's meeting.</strong> Their topics go first; status can be handled in writing.</li><li><strong>Never cancel, only reschedule.</strong> Cancelled 1:1s are the most common reason people say they feel unsupported.</li><li><strong>Ask, then shut up.</strong> The best questions are followed by silence long enough to be slightly uncomfortable.</li><li><strong>Write down commitments.</strong> Two lines at the end: what each person will do before next time.</li></ul><p>Read the full <a href="/myperformance-com/guides/how-to-give-feedback/">feedback guide</a> or grab the <a href="/myperformance-com/templates/one-on-one-meeting/">1:1 template</a>.</p></article>
+  <aside><div class="ad-slot rect sticky-side" data-slot="oo-side">Advertisement</div></aside>
+</div></section>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id)};
+var B={
+wins:{m:['What went well since we last spoke — and what made it work?','What are you proud of that nobody has noticed?'],r:['Share 1–2 wins with the result and who it helped.','Anything I did that I would like recognised more widely?']},
+blockers:{m:['What is slowing you down that I could remove?','Where do you need a decision from me or someone else?'],r:['Where am I stuck and what specifically do I need?','Which decision is waiting on someone else?']},
+priorities:{m:['What are your top three priorities for the next two weeks?','Is anything on your plate that should not be?'],r:['Confirm my top three priorities and check they match yours.','Anything I should stop doing?']},
+feedback:{m:['One thing you would like me to do differently as your manager?','Here is one specific piece of feedback for you: …'],r:['One thing I would like from you as my manager.','Ask: what is one thing I could do better this month?']},
+growth:{m:['Which skill do you want to be known for a year from now?','What would make the next six months feel like real progress?'],r:['Where do I want to be in 12 months and what is the next step?','Which project or exposure would stretch me most?']},
+wellbeing:{m:['How sustainable is your workload right now, honestly?','What is draining your energy that we could change?'],r:['Is my workload sustainable? Name what is not.','What would make the week feel lighter?']},
+team:{m:['How is the team working together from where you sit?','Anyone you would like to work with more, or less?'],r:['Any friction on the team I should raise?','Who could I learn from that I am not working with?']}};
+var T={weekly:'Weekly check-in',monthly:'Monthly growth conversation',review:'Pre-review alignment',first:'First 1:1',skip:'Skip-level 1:1'};
+var extra={review:{m:['Walk through the review criteria together — no surprises on the day.','Which achievements should be in the write-up? Agree the evidence.','Where do we see the rating differently, and why?'],r:['Ask which achievements the manager sees as most significant.','Check how my self-evaluation will be used.','Ask: is there anything that would surprise me in my review?']},first:{m:['How do you like to receive feedback and recognition?','What did your best manager do that I should copy?','What do you need from me in the first month?'],r:['How do you prefer to communicate: written, calls, ad hoc?','What does success look like in this role in 90 days?','How do decisions get made here?']},skip:{m:['What is working well on the team and what is not?','Is there anything you would tell me that you would not tell your manager?','What should leadership know that it does not?'],r:['What is working and what is not, from my seat.','One thing leadership may not be seeing.','One question about strategy or direction.']}};
+function render(){var who=$('oo-who').value,len=+$('oo-len').value,type=$('oo-type').value,names=$('oo-names').value.trim(),date=$('oo-date').value;
+var f=[].map.call(document.querySelectorAll('#oo-focus .chip.active'),function(c){return c.dataset.f});
+var items=[];f.forEach(function(k){items.push([k.charAt(0).toUpperCase()+k.slice(1),B[k][who==='manager'?'m':'r']])});if(extra[type])items.unshift([T[type]+' focus',extra[type][who==='manager'?'m':'r']]);
+var slots=items.length+2,per=Math.max(3,Math.floor((len-5)/Math.max(1,items.length))),o=[];
+o.push('1:1 AGENDA — '+T[type].toUpperCase());o.push((names||'[Names]')+(date?'  ·  '+new Date(date).toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'}):'')+'  ·  '+len+' minutes');o.push('');
+o.push('0–2 min   Check-in: how are you, really? (one word, then why)');var t=2;
+items.forEach(function(it){o.push(pad(t,t+per)+it[0]);it[1].forEach(function(q){o.push('          • '+q)});t+=per});
+o.push(pad(t,len)+'Commitments & close');o.push('          • '+(who==='manager'?'I will: …':'My manager will: …'));o.push('          • '+(who==='manager'?'You will: …':'I will: …'));o.push('          • Anything we should add to next time?');o.push('');
+o.push('Notes:');o.push('');o.push('Generated with the 1:1 Agenda Builder — myperformance.com');
+$('oo-out').textContent=o.join('\n');}
+function pad(a,b){var s=a+'–'+b+' min';while(s.length<10)s+=' ';return s}
+$('oo').addEventListener('input',render);$('oo-focus').addEventListener('click',function(e){var c=e.target.closest('.chip');if(c){c.classList.toggle('active');render()}});render();
+})();
+</script>
+
+</main>
+<div data-shell="band"></div>
+<div data-shell="footer"></div>
+<div data-shell="modal"></div>
+<script src="/myperformance-com/assets/js/shell.js" defer></script>
+<script src="/myperformance-com/assets/js/main.js" defer></script>
+
+</body>
+</html>
