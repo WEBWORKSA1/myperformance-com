@@ -4,6 +4,8 @@ Free tools, templates and guides to measure, review and improve performance at w
 
 **Live:** https://webworksa1.github.io/myperformance-com/ (custom domain: add a `CNAME` file containing `myperformance.com` and point DNS — see below).
 
+**First-time activation:** see [`setup/README.md`](setup/README.md) — one file to add through the GitHub UI and the site deploys itself.
+
 ## Structure
 
 ```
@@ -13,8 +15,9 @@ src/guides/*.md          Markdown guides with JSON front matter
 assets/css/main.css      single stylesheet (light/dark)
 assets/js/main.js        runtime + CONFIG (ads, YouTube, donations, analytics, hidden contact address)
 assets/data/phrases.json review phrase library
+assets/data/search-index.json  generated
 docs/                    phase-wise build prompts, competitor research
-.github/workflows/pages.yml    builds _site/ and deploys to GitHub Pages on push to main
+setup/pages.yml          GitHub Pages workflow — copy to .github/workflows/pages.yml
 ```
 
 The GitHub Actions workflow builds `_site/` and deploys it to GitHub Pages on every push to `main`; generated output is not committed.
