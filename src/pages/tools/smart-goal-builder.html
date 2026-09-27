@@ -1,0 +1,54 @@
+<!--META {"title":"SMART Goal Builder — Turn Vague Goals into Measurable Ones","description":"Free SMART goal generator. Enter what you want to achieve and the builder produces a Specific, Measurable, Achievable, Relevant, Time-bound goal statement plus milestones and a tracking plan.","url":"/tools/smart-goal-builder/","section":"Tool","tags":"smart goals generator goal setting okr objectives examples work"} -->
+<div class="wrap"><p class="breadcrumb"><a href="/">Home</a> › <a href="/tools/">Tools</a> › SMART Goal Builder</p></div>
+<section class="tight"><div class="wrap">
+  <span class="eyebrow">Free tool</span>
+  <h1>SMART Goal Builder</h1>
+  <p class="lead muted" style="max-width:760px">Most goals fail at the wording stage. Fill in the five parts and get a goal statement your manager can approve, plus a milestone plan and a scoring rubric you can drop into any review or OKR system.</p>
+  <div class="tool"><div class="grid g2" style="gap:32px">
+    <form class="form" id="sg" onsubmit="return false">
+      <div><label><span class="badge">S</span> Specific — what exactly will you achieve?</label><input id="sg-s" placeholder="Increase qualified inbound leads for the EMEA region"></div>
+      <div class="form-row"><div><label><span class="badge">M</span> Measurable — metric</label><input id="sg-metric" placeholder="qualified leads per month"></div><div><label>From → To</label><div style="display:flex;gap:6px"><input id="sg-from" placeholder="120"><input id="sg-to" placeholder="180"></div></div></div>
+      <div><label><span class="badge">A</span> Achievable — how / key actions (comma-separated)</label><input id="sg-how" placeholder="launch 2 webinars per month, rewrite 10 landing pages, add a chat qualifier"></div>
+      <div><label><span class="badge">R</span> Relevant — why it matters to the team or business</label><input id="sg-why" placeholder="pipeline is the top constraint on EMEA revenue this year"></div>
+      <div class="form-row"><div><label><span class="badge">T</span> Time-bound — deadline</label><input id="sg-when" type="date"></div><div><label>Owner</label><input id="sg-owner" placeholder="Me / team name"></div></div>
+      <div><label>Check-in cadence</label><select id="sg-cad"><option>weekly</option><option selected>fortnightly</option><option>monthly</option></select></div>
+      <div class="chips"><button type="button" class="chip" onclick="sgExample()">Load example</button><button type="button" class="chip" onclick="document.getElementById('sg').reset();sgRender()">Clear</button></div>
+    </form>
+    <div>
+      <label>Your SMART goal</label>
+      <div class="output" id="sg-out" style="min-height:420px"></div>
+      <div class="tool-actions"><button class="btn btn-primary" onclick="mpCopy('#sg-out',this)">Copy</button><button class="btn btn-ghost" onclick="mpDownload('#sg-out','smart-goal.txt')">Download</button><button class="btn btn-ghost" onclick="mpPrint()">Print</button></div>
+    </div>
+  </div></div>
+</div></section>
+<div class="wrap"><div class="ad-slot leader" data-slot="sg-mid">Advertisement</div></div>
+<section class="tight"><div class="wrap with-side">
+  <article class="prose">
+    <h2>Why SMART goals still work (when you do them properly)</h2>
+    <p>SMART has been around since 1981 and still dominates because it forces the two decisions people avoid: <em>how will we know</em> and <em>by when</em>. The builder adds two things the acronym leaves out — milestones and a scoring rubric — because goals with intermediate checkpoints are completed far more often than goals with only a final deadline.</p>
+    <h3>SMART vs OKR</h3>
+    <table><tr><th></th><th>SMART goal</th><th>OKR</th></tr><tr><td>Best for</td><td>Individual performance goals, development plans</td><td>Team and company alignment</td></tr><tr><td>Ambition</td><td>Achievable (aim for 100%)</td><td>Stretch (70% is success)</td></tr><tr><td>Structure</td><td>One statement</td><td>Objective + 3–5 key results</td></tr></table>
+    <p>If you are setting quarterly team goals, use the <a href="/templates/okr-goal-setting/">OKR worksheet</a> instead. For examples by department see <a href="/guides/smart-goals-examples/">30 SMART goal examples for work</a>.</p>
+  </article>
+  <aside><div class="card flat" style="margin-bottom:20px"><h3>Related</h3><ul class="list-check small"><li><a href="/guides/smart-goals-examples/">30 SMART goals examples</a></li><li><a href="/guides/okrs-for-individuals/">OKRs for individuals</a></li><li><a href="/tools/habit-tracker/">Track the habits behind the goal</a></li></ul></div><div class="ad-slot rect sticky-side" data-slot="sg-side">Advertisement</div></aside>
+</div></section>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id).value.trim()};
+function fmt(d){if(!d)return '[deadline]';var x=new Date(d);return isNaN(x)?d:x.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'})}
+window.sgRender=function(){
+  var s=$('sg-s')||'[what you will achieve]',m=$('sg-metric')||'[metric]',f=$('sg-from'),t=$('sg-to'),how=$('sg-how'),why=$('sg-why')||'[why it matters]',when=$('sg-when'),own=$('sg-owner')||'Me',cad=$('sg-cad');
+  var fn=parseFloat(f),tn=parseFloat(t),delta='';if(!isNaN(fn)&&!isNaN(tn)&&fn!==0){delta=' ('+(tn>fn?'+':'')+Math.round((tn-fn)/Math.abs(fn)*100)+'%)'}
+  var o=[];o.push('SMART GOAL');o.push('');
+  o.push('Goal statement:');o.push(s.charAt(0).toUpperCase()+s.slice(1).replace(/\.$/,'')+(f&&t?', moving '+m+' from '+f+' to '+t+delta:m!=='[metric]'?', measured by '+m:'')+' by '+fmt(when)+', because '+why.replace(/\.$/,'')+'.');o.push('');
+  o.push('Owner: '+own+'    Deadline: '+fmt(when)+'    Check-ins: '+cad);o.push('');
+  o.push('Key actions:');(how?how.split(',').map(function(x){return x.trim()}).filter(Boolean):['[action 1]','[action 2]','[action 3]']).forEach(function(a,i){o.push('  '+(i+1)+'. '+a.charAt(0).toUpperCase()+a.slice(1))});o.push('');
+  if(when){var end=new Date(when),now=new Date();if(end>now){var days=Math.round((end-now)/864e5);o.push('Milestones ('+days+' days remaining):');[0.25,0.5,0.75,1].forEach(function(p){var d=new Date(now.getTime()+(end-now)*p);var val=(!isNaN(fn)&&!isNaN(tn))?' → target '+m+': '+Math.round((fn+(tn-fn)*p)*10)/10:'';o.push('  '+Math.round(p*100)+'% — '+d.toLocaleDateString(undefined,{month:'short',day:'numeric'})+val)});o.push('');}}
+  o.push('Scoring rubric:');o.push('  Exceeded  — target beaten by 10%+ or achieved ahead of deadline');o.push('  Achieved  — target met by deadline');o.push('  Partial   — 70–99% of target, with documented blockers');o.push('  Missed    — below 70%; write a one-paragraph retrospective');o.push('');
+  o.push('Risks & dependencies: [what could stop this, and who you need]');
+  document.getElementById('sg-out').textContent=o.join('\n');
+};
+window.sgExample=function(){var d=new Date();d.setMonth(d.getMonth()+3);var v={'sg-s':'Increase qualified inbound leads for the EMEA region','sg-metric':'qualified leads per month','sg-from':'120','sg-to':'180','sg-how':'launch 2 webinars per month, rewrite the 10 highest-traffic landing pages, add a chat qualifier to the pricing page','sg-why':'pipeline is the top constraint on EMEA revenue this year','sg-when':d.toISOString().slice(0,10),'sg-owner':'Alex Morgan (Marketing)'};Object.keys(v).forEach(function(k){document.getElementById(k).value=v[k]});sgRender();};
+document.getElementById('sg').addEventListener('input',sgRender);sgRender();
+})();
+</script>

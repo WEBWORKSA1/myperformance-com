@@ -1,0 +1,68 @@
+<!--META {"title":"Self-Evaluation Generator — Write Your Performance Self-Appraisal in Minutes","description":"Free self-evaluation generator. Answer a few questions about your achievements, challenges and goals and get a polished, structured performance review self-assessment to copy or download.","url":"/tools/self-evaluation-generator/","section":"Tool","tags":"self evaluation generator self appraisal self assessment performance review employee"} -->
+<div class="wrap"><p class="breadcrumb"><a href="/">Home</a> › <a href="/tools/">Tools</a> › Self-Evaluation Generator</p></div>
+<section class="tight"><div class="wrap">
+  <span class="eyebrow">Free tool · nothing is uploaded</span>
+  <h1>Self-Evaluation Generator</h1>
+  <p class="lead muted" style="max-width:760px">Answer the questions on the left. Your self-evaluation writes itself on the right using the structure managers and HR teams prefer: summary, achievements with evidence, challenges handled, growth areas, and goals. Copy, download or print.</p>
+  <div class="tool"><div class="grid g2" style="gap:32px">
+    <form class="form" id="se-form" onsubmit="return false">
+      <div class="form-row"><div><label>Your name</label><input id="se-name" placeholder="Alex Morgan"></div><div><label>Role / title</label><input id="se-role" placeholder="Senior Account Manager"></div></div>
+      <div class="form-row"><div><label>Review period</label><input id="se-period" placeholder="January – December 2026"></div><div><label>Tone</label><select id="se-tone"><option value="confident">Confident &amp; direct</option><option value="balanced">Balanced &amp; measured</option><option value="humble">Humble &amp; collaborative</option></select></div></div>
+      <div><label>Achievement 1 — what you did and the measurable result</label><textarea id="se-a1" style="min-height:70px" placeholder="Led the CRM migration; cut lead response time from 2 days to 4 hours, contributing to a 15% lift in conversion."></textarea></div>
+      <div><label>Achievement 2</label><textarea id="se-a2" style="min-height:70px" placeholder="Grew the renewal rate on my accounts from 82% to 91%."></textarea></div>
+      <div><label>Achievement 3 (optional)</label><textarea id="se-a3" style="min-height:60px" placeholder="Mentored two new hires who both hit quota in their first quarter."></textarea></div>
+      <div><label>Biggest challenge you faced and how you handled it</label><textarea id="se-ch" style="min-height:70px" placeholder="A key client threatened to churn after a delivery delay; I set up weekly calls, rebuilt the plan and retained the account."></textarea></div>
+      <div><label>Strengths you demonstrated (comma-separated)</label><input id="se-str" placeholder="communication, ownership, prioritisation"></div>
+      <div><label>One or two areas you want to develop</label><input id="se-dev" placeholder="delegating more, presenting to executives"></div>
+      <div><label>Goals for the next period</label><textarea id="se-goals" style="min-height:70px" placeholder="Reach 95% renewal rate; complete a negotiation course; own the enterprise onboarding playbook."></textarea></div>
+      <div><label>Support you need from your manager (optional)</label><input id="se-support" placeholder="a mentor in the enterprise team; budget for one course"></div>
+      <div class="chips"><button type="button" class="chip" onclick="seExample()">Load example</button><button type="button" class="chip" onclick="document.getElementById('se-form').reset();seRender()">Clear</button></div>
+    </form>
+    <div>
+      <label>Your self-evaluation</label>
+      <div class="output" id="se-out" style="min-height:480px"></div>
+      <div class="tool-actions"><button class="btn btn-primary" onclick="mpCopy('#se-out',this)">Copy text</button><button class="btn btn-ghost" onclick="mpDownload('#se-out','my-self-evaluation.txt')">Download .txt</button><button class="btn btn-ghost" onclick="mpPrint()">Print / PDF</button></div>
+      <p class="form-note" style="margin-top:10px">Tip: paste into your company's form, then tighten each achievement to one number and one impact statement.</p>
+    </div>
+  </div></div>
+</div></section>
+<div class="wrap"><div class="ad-slot leader" data-slot="se-mid">Advertisement</div></div>
+<section class="tight"><div class="wrap with-side">
+  <article class="prose">
+    <h2>What makes a self-evaluation persuasive</h2>
+    <p>Managers read dozens of self-assessments in a review cycle. The ones that move ratings share four traits: they lead with outcomes, they quantify, they own weaknesses before the manager has to raise them, and they end with goals that align to the team's priorities. This generator enforces that structure so you can focus on the content.</p>
+    <h3>The structure this tool produces</h3>
+    <ol><li><strong>Summary</strong> — two sentences positioning your period.</li><li><strong>Key achievements</strong> — each with action, result and impact.</li><li><strong>Challenges</strong> — one honest difficulty and how you handled it.</li><li><strong>Strengths and development areas</strong> — balanced, specific.</li><li><strong>Goals and support</strong> — forward-looking, measurable, and it asks for what you need.</li></ol>
+    <h3>Common mistakes it helps you avoid</h3>
+    <ul><li>Listing responsibilities instead of results ("managed accounts" vs "grew renewals from 82% to 91%").</li><li>Vague self-praise with no evidence.</li><li>Skipping the development section — which reads as low self-awareness.</li><li>Goals nobody can measure.</li></ul>
+    <p>Want more depth? Read the full <a href="/guides/how-to-write-a-self-evaluation/">self-evaluation guide</a>, browse the <a href="/tools/performance-review-phrases/">phrase library</a>, or use the printable <a href="/templates/self-evaluation/">self-evaluation template</a>.</p>
+  </article>
+  <aside>
+    <div class="card flat" style="margin-bottom:20px"><span class="eyebrow">Next step</span><h3>Turn the review into a raise</h3><p class="muted small">Use the calculator to see what a rating is worth, then read the ask-for-a-raise script.</p><a class="btn btn-primary btn-sm" href="/tools/raise-calculator/">Raise calculator →</a></div>
+    <div class="ad-slot rect sticky-side" data-slot="se-side">Advertisement</div>
+  </aside>
+</div></section>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id).value.trim()};
+var T={confident:{open:'delivered strong, measurable results',own:'I take full ownership of',dev:'I am actively working to strengthen',close:'I am confident that'},balanced:{open:'made solid, measurable progress',own:'I recognise that',dev:'I want to continue developing',close:'I believe that'},humble:{open:'contributed to the team\'s results',own:'With the support of my team, I recognise that',dev:'I would value the opportunity to develop',close:'I hope that'}};
+window.seRender=function(){
+  var name=$('se-name')||'[Your name]',role=$('se-role')||'[Role]',period=$('se-period')||'[Review period]',t=T[$('se-tone')||'confident'];
+  var ach=[$('se-a1'),$('se-a2'),$('se-a3')].filter(Boolean),ch=$('se-ch'),str=$('se-str'),dev=$('se-dev'),goals=$('se-goals'),sup=$('se-support');
+  var o=[];
+  o.push('SELF-EVALUATION — '+name.toUpperCase());o.push(role+'  |  Review period: '+period);o.push('');
+  o.push('1. SUMMARY');o.push('Over this period I '+t.open+' in my role as '+role+'. '+(ach.length?'My focus was on '+ach.length+' priorities described below, alongside my day-to-day responsibilities. ':'')+(str?'The strengths I relied on most were '+str+'. ':'')+t.close+' the outcomes below reflect both consistent execution and growth.');o.push('');
+  o.push('2. KEY ACHIEVEMENTS');
+  if(ach.length){ach.forEach(function(a,i){o.push((i+1)+'. '+a.replace(/\.$/,'')+'.');});}else{o.push('[Add 2–3 achievements. For each: what you did, the measurable result, and who it helped.]');}
+  o.push('');
+  o.push('3. CHALLENGES AND HOW I HANDLED THEM');o.push(ch?ch.replace(/\.$/,'')+'. '+t.own+' the outcome and applied what I learned to subsequent work.':'[Describe one real challenge, the action you took, and the result. Honesty here builds credibility.]');o.push('');
+  o.push('4. STRENGTHS AND DEVELOPMENT AREAS');o.push('Strengths: '+(str||'[e.g. communication, ownership, prioritisation]')+'.');o.push('Development: '+t.dev+' '+(dev||'[one or two specific areas]')+'. I have identified concrete steps for each and will track progress with my manager.');o.push('');
+  o.push('5. GOALS FOR THE NEXT PERIOD');o.push(goals?goals.replace(/\.$/,'')+'.':'[List 2–4 measurable goals aligned with team priorities.]');
+  if(sup)o.push('Support requested: '+sup.replace(/\.$/,'')+'.');
+  o.push('');o.push('Thank you for the opportunity to reflect on this period. I welcome your feedback and look forward to discussing these points in our review.');
+  document.getElementById('se-out').textContent=o.join('\n');
+};
+window.seExample=function(){var v={'se-name':'Alex Morgan','se-role':'Senior Account Manager','se-period':'January – December 2026','se-a1':'Led the CRM migration for the sales team, cutting average lead response time from 2 days to 4 hours and contributing to a 15% lift in lead-to-opportunity conversion','se-a2':'Grew the renewal rate across my 38 accounts from 82% to 91%, protecting $1.2M in annual recurring revenue','se-a3':'Mentored two new account managers who both exceeded quota in their first full quarter','se-ch':'A top-10 client threatened to churn after a delivery delay in Q2. I set up weekly executive calls, rebuilt the delivery plan with the product team, and retained the account, which has since expanded by 20%','se-str':'clear communication, ownership, prioritisation under pressure','se-dev':'delegating operational tasks, presenting to executive audiences','se-goals':'Reach a 95% renewal rate; complete an advanced negotiation course by Q2; own and document the enterprise onboarding playbook','se-support':'a mentor from the enterprise team and budget for one external course'};Object.keys(v).forEach(function(k){document.getElementById(k).value=v[k]});seRender();};
+document.getElementById('se-form').addEventListener('input',seRender);seRender();
+})();
+</script>
