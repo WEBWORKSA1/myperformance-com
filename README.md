@@ -9,7 +9,7 @@ Free tools, templates and guides to measure, review and improve performance at w
 ## Structure
 
 ```
-build.py                 static generator: src/ → _site/
+build.py                 static generator: src/ → repo root (or $OUT_DIR)
 src/pages/**/*.html      page fragments with <!--META {...}--> front matter
 src/guides/*.md          Markdown guides with JSON front matter
 assets/css/main.css      single stylesheet (light/dark)
@@ -20,14 +20,15 @@ docs/                    phase-wise build prompts, competitor research
 setup/pages.yml          GitHub Pages workflow — copy to .github/workflows/pages.yml
 ```
 
-The GitHub Actions workflow builds `_site/` and deploys it to GitHub Pages on every push to `main`; generated output is not committed.
+Generated pages are committed at the repo root so GitHub Pages can serve `main` / root directly (the same pattern as a plain static site). After editing anything in `src/` or `assets/`, run `python3 build.py` and commit the output. The optional workflow in `setup/` does the same build in CI.
 
 ## Build
 
 ```
 python3 -m pip install markdown
-python3 build.py
-cd _site && python3 -m http.server 8080   # preview
+python3 build.py                          # writes pages into the repo root
+SITE_URL=https://webworksa1.github.io/myperformance-com python3 build.py   # for the project Pages URL
+python3 -m http.server 8080               # preview
 ```
 
 Set `SITE_URL` to build for a different host (the workflow sets it to the project Pages URL, or to the `CNAME` domain when that file exists).

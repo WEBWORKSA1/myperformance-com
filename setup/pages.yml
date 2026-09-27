@@ -27,7 +27,7 @@ jobs:
         run: |
           if [ -f CNAME ]; then export SITE_URL="https://$(cat CNAME)"; else export SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}"; fi
           echo "Building for $SITE_URL"
-          python3 build.py
+          OUT_DIR=_site python3 build.py
       - name: Configure Pages (enables Pages on first run)
         uses: actions/configure-pages@v5
         with:
