@@ -1,0 +1,46 @@
+# Copy this file to .github/workflows/pages.yml (same content) to activate automatic
+# build + deploy to GitHub Pages on every push to main. GitHub's API refuses to let
+# integrations write workflow files, so this one step is done through the GitHub UI:
+#   Repo -> Add file -> Create new file -> name: .github/workflows/pages.yml -> paste -> Commit.
+name: Build and deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install markdown
+      - name: Build (custom domain if CNAME exists, else project Pages URL)
+        run: |
+          if [ -f CNAME ]; then export SITE_URL="https://$(cat CNAME)"; else export SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}"; fi
+          echo "Building for $SITE_URL"
+          python3 build.py
+      - name: Configure Pages (enables Pages on first run)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
