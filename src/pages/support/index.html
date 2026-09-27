@@ -1,0 +1,61 @@
+<!--META {"title":"Support MyPerformance.com — Keep the Tools Free","description":"MyPerformance.com is reader-supported. Donate once or monthly to keep every tool, template and guide free, fund new tools, contests and prizes, and support the people who build them.","url":"/support/","section":"Support","tags":"donate support us contribute sponsor keep free","no_band":true} -->
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow">Reader-supported since day one</span>
+    <h1>Everything here is free. Readers like you keep it that way.</h1>
+    <p class="lead">No paywall, no sign-up wall, no "premium" tools. If MyPerformance.com helped you write a better review, land a raise or fix your week, a small contribution funds the next tool — and keeps the existing ones ad-light and independent.</p>
+    <div class="grid g3" style="gap:12px;margin-top:20px">
+      <div class="card flat"><b>🛠️ New tools</b><p class="muted small" style="margin:6px 0 0">Every $250 funds roughly one new interactive tool, tested and free forever.</p></div>
+      <div class="card flat"><b>🏆 Contests &amp; prizes</b><p class="muted small" style="margin:6px 0 0">Contributions fund the monthly <a href="/contests/">Performance Challenge</a> prize pool.</p></div>
+      <div class="card flat"><b>✍️ Paid contributors</b><p class="muted small" style="margin:6px 0 0">Writers, editors and video creators are paid fairly for every piece.</p></div>
+    </div>
+  </div>
+  <div class="card flat">
+    <h3>Choose an amount</h3>
+    <div class="toggle" style="margin-bottom:14px"><button type="button" class="active" data-freq="once">One-time</button><button type="button" data-freq="monthly">Monthly ♥</button></div>
+    <div class="amounts" id="amounts">
+      <button type="button" class="choice" data-amt="5">$5</button><button type="button" class="choice selected" data-amt="15">$15</button><button type="button" class="choice" data-amt="30">$30</button><button type="button" class="choice" data-amt="100">$100</button>
+    </div>
+    <div style="margin:12px 0"><label>Or a custom amount</label><input type="number" id="custom-amt" placeholder="Enter amount" min="1"></div>
+    <p class="small muted" id="impact">$15 covers the hosting and email delivery for about 3,000 readers this month.</p>
+    <div style="display:grid;gap:8px">
+      <a class="btn btn-primary btn-block" data-donate="paypal" href="#" target="_blank" rel="noopener">Donate via PayPal</a>
+      <a class="btn btn-primary btn-block" data-donate="buymeacoffee" href="#" target="_blank" rel="noopener">Donate via Buy Me a Coffee</a>
+      <a class="btn btn-primary btn-block" data-donate="kofi" href="#" target="_blank" rel="noopener">Donate via Ko-fi</a>
+      <a class="btn btn-ghost btn-block" data-donate="patreon" href="#" target="_blank" rel="noopener">Become a monthly patron</a>
+    </div>
+    <p class="form-note" style="margin-top:12px">Secure payment is handled by the provider you choose; we never see your card details. Donations are voluntary contributions to an independent publication, not tax-deductible charitable gifts. Bank transfer or invoice for company sponsorships: <a data-mail data-subject="Sponsorship / invoice request — MyPerformance.com" href="#">contact us</a>.</p>
+  </div>
+</div></section>
+
+<section class="tight"><div class="wrap">
+  <div class="section-head center"><span class="eyebrow">Transparency</span><h2>Where the money goes</h2></div>
+  <div class="grid g4">
+    <div class="card flat center"><div class="result-big">40%</div><p class="muted small">Building and maintaining tools &amp; templates</p></div>
+    <div class="card flat center"><div class="result-big">25%</div><p class="muted small">Paying writers, editors and video creators</p></div>
+    <div class="card flat center"><div class="result-big">20%</div><p class="muted small">Contest prizes and community programmes</p></div>
+    <div class="card flat center"><div class="result-big">15%</div><p class="muted small">Hosting, email, marketing and operations</p></div>
+  </div>
+  <p class="center muted small" style="margin-top:14px">Target allocation. We publish a short annual summary for supporters.</p>
+</div></section>
+
+<section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <div class="section-head center"><span class="eyebrow">Other ways to help</span><h2>No money required</h2></div>
+  <div class="grid g4">
+    <div class="card flat"><div class="icon">🔗</div><h3>Share a tool</h3><p class="muted small">Send the <a href="/tools/self-evaluation-generator/">self-evaluation generator</a> to one colleague before review season. Word of mouth is our biggest traffic source.</p></div>
+    <div class="card flat"><div class="icon">▶</div><h3>Subscribe on YouTube</h3><p class="muted small">Watching and subscribing supports the channel directly. <a data-youtube-channel href="#" target="_blank" rel="noopener">Subscribe →</a></p></div>
+    <div class="card flat"><div class="icon">🏢</div><h3>Sponsor as a company</h3><p class="muted small">Sponsor a tool, a guide or the newsletter. <a href="/advertise/">Media kit →</a></p></div>
+    <div class="card flat"><div class="icon">💡</div><h3>Send feedback</h3><p class="muted small">Found a bug, a typo, or a tool we should build? <a href="/contact/">Tell us →</a></p></div>
+  </div>
+</div></section>
+
+<section class="tight"><div class="wrap narrow" style="margin:0 auto">
+  <div class="card flat"><span class="eyebrow">Supporter wall</span><h3>Thank you</h3><p class="muted small">Supporters who opt in are listed here by first name and city. Want to appear? Mention it in your donation note or <a data-mail data-subject="Supporter wall — MyPerformance.com" href="#">email us</a>.</p><p class="muted small"><em>Be the first name on this wall.</em></p></div>
+</div></section>
+<script>
+(function(){var amt=15,freq='once';var msgs={5:'$5 sends the weekly brief to about 1,000 readers.',15:'$15 covers the hosting and email delivery for about 3,000 readers this month.',30:'$30 funds a full guide, edited and illustrated.',100:'$100 covers a month of contest prizes.'};
+function upd(){var m=msgs[amt]||('$'+amt+(freq==='monthly'?' a month':'')+' — thank you. Every contribution goes into the next free tool.');if(freq==='monthly'&&msgs[amt])m=m.replace('.', ' — every month.');document.getElementById('impact').textContent=m;document.querySelectorAll('[data-donate]').forEach(function(a){var h=a.getAttribute('href')||'';if(h&&h!=='#'&&h.indexOf('mailto')<0){try{var u=new URL(h);u.searchParams.set('amount',amt);a.setAttribute('href',u.toString())}catch(e){}}});}
+document.getElementById('amounts').addEventListener('click',function(e){var c=e.target.closest('.choice');if(!c)return;document.querySelectorAll('#amounts .choice').forEach(function(x){x.classList.remove('selected')});c.classList.add('selected');amt=+c.dataset.amt;document.getElementById('custom-amt').value='';upd()});
+document.getElementById('custom-amt').addEventListener('input',function(){if(this.value>0){amt=+this.value;document.querySelectorAll('#amounts .choice').forEach(function(x){x.classList.remove('selected')});upd()}});
+document.querySelector('.toggle').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('.toggle button').forEach(function(x){x.classList.remove('active')});b.classList.add('active');freq=b.dataset.freq;upd()});upd();})();
+</script>
