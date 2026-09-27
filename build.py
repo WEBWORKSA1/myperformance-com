@@ -294,7 +294,7 @@ def main():
     write("guides/index.html", layout(gmeta, gbody)); pages.append(gmeta)
     # Search index
     idx = [{"title": p["title"], "description": p.get("description", ""), "url": p["url"], "section": p.get("section", "Page"), "tags": p.get("tags", "")} for p in pages if not p.get("noindex")]
-    write("assets/data/search-index.json", json.dumps(idx, indent=0))
+    write("assets/data/search-index.json", json.dumps(idx, indent=0, ensure_ascii=False))
     # Sitemap + robots
     urls = "".join(f"<url><loc>{SITE}{p['url']}</loc><lastmod>{TODAY}</lastmod><changefreq>{'weekly' if p.get('section') in ('Guide','Tool') else 'monthly'}</changefreq><priority>{'1.0' if p['url']=='/' else '0.8' if p.get('section') in ('Tool','Template','Guide') else '0.5'}</priority></url>" for p in pages if not p.get("noindex"))
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>')
