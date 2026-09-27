@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raise &amp; Promotion Calculator — What Your Performance Review Is Worth | MyPerformance.com</title>
+<meta name="description" content="Calculate what a raise percentage or promotion is worth over 1, 5 and 10 years, compare it with inflation, and see the compounding cost of a skipped raise. Free, instant, private.">
+<link rel="canonical" href="https://webworksa1.github.io/myperformance-com/tools/raise-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MyPerformance.com"><meta property="og:title" content="Raise &amp; Promotion Calculator — What Your Performance Review Is Worth"><meta property="og:description" content="Calculate what a raise percentage or promotion is worth over 1, 5 and 10 years, compare it with inflation, and see the compounding cost of a skipped raise. Free, instant, private."><meta property="og:url" content="https://webworksa1.github.io/myperformance-com/tools/raise-calculator/"><meta property="og:image" content="https://webworksa1.github.io/myperformance-com/assets/img/og-cover.svg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Raise &amp; Promotion Calculator — What Your Performance Review Is Worth"><meta name="twitter:description" content="Calculate what a raise percentage or promotion is worth over 1, 5 and 10 years, compare it with inflation, and see the compounding cost of a skipped raise. Free, instant, private."><meta name="twitter:image" content="https://webworksa1.github.io/myperformance-com/assets/img/og-cover.svg">
+<meta name="theme-color" content="#1e3a8a">
+<link rel="icon" href="/myperformance-com/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/myperformance-com/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/myperformance-com/assets/css/main.css">
+<script>window.MP_BASE="/myperformance-com";</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "MyPerformance.com", "url": "https://webworksa1.github.io/myperformance-com", "potentialAction": {"@type": "SearchAction", "target": "https://webworksa1.github.io/myperformance-com/search/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+
+</head>
+<body>
+<div class="topbar">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership → <a href="https://web.works/contact" target="_blank" rel="noopener">web.works/contact</a></div>
+<header class="header">
+  <div class="wrap nav">
+    <a class="logo" href="/myperformance-com/" aria-label="MyPerformance.com home"><span class="mark">MP</span><span>My<b>Performance</b><i class="dom">.com</i></span></a>
+    <nav aria-label="Main" data-shell="menu"><ul class="menu"></ul></nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="/myperformance-com/search/" aria-label="Search">🔍</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">◐</button>
+      <a class="btn btn-primary btn-sm" href="/myperformance-com/coaching/">Free performance audit</a>
+      <button class="burger" data-burger aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap"><p class="breadcrumb"><a href="/myperformance-com/">Home</a> › <a href="/myperformance-com/tools/">Tools</a> › Raise &amp; Promotion Calculator</p></div>
+<section class="tight"><div class="wrap">
+  <span class="eyebrow">Free calculator</span>
+  <h1>Raise &amp; Promotion Calculator</h1>
+  <p class="lead muted" style="max-width:760px">A good review is worth real money — and a skipped raise compounds against you for years. Enter your numbers to see the true value of the conversation you are about to have.</p>
+  <div class="tool"><div class="grid g2" style="gap:32px">
+    <form class="form" id="rc" onsubmit="return false">
+      <div class="form-row"><div><label>Current annual salary</label><input id="rc-sal" type="number" value="75000" min="0" step="500"></div><div><label>Currency symbol</label><input id="rc-cur" value="$" maxlength="4"></div></div>
+      <div><label>Raise you plan to ask for: <output id="rc-raise-o">8</output>%</label><div class="range-row"><input type="range" id="rc-raise" min="0" max="40" step="0.5" value="8"></div></div>
+      <div><label>Raise you expect to be offered by default: <output id="rc-def-o">3</output>%</label><div class="range-row"><input type="range" id="rc-def" min="0" max="20" step="0.5" value="3"></div></div>
+      <div><label>Expected inflation: <output id="rc-inf-o">3</output>%</label><div class="range-row"><input type="range" id="rc-inf" min="0" max="12" step="0.1" value="3"></div></div>
+      <div><label>Assumed annual raises after this year: <output id="rc-fut-o">3</output>%</label><div class="range-row"><input type="range" id="rc-fut" min="0" max="15" step="0.5" value="3"></div></div>
+      <div><label>Promotion scenario — new salary if promoted (optional)</label><input id="rc-promo" type="number" placeholder="e.g. 92000" min="0" step="500"></div>
+    </form>
+    <div>
+      <div class="grid g2" style="gap:12px">
+        <div class="card flat"><span class="muted small">New salary if you get your ask</span><div class="result-big" id="rc-new">—</div><span class="small" id="rc-monthly"></span></div>
+        <div class="card flat"><span class="muted small">Extra vs the default raise, year 1</span><div class="result-big" id="rc-diff" style="color:var(--ok)">—</div><span class="small" id="rc-real"></span></div>
+      </div>
+      <table class="table" style="margin-top:16px"><thead><tr><th>Horizon</th><th>Default raise path</th><th>Your ask path</th><th>Difference</th></tr></thead><tbody id="rc-table"></tbody></table>
+      <div id="rc-promo-out" class="notice" style="margin-top:14px;display:none"></div>
+      <p class="form-note" style="margin-top:12px">Cumulative figures assume the same future raise % on both paths; the gap is the compounding value of this one negotiation. Excludes tax, bonus and pension effects.</p>
+      <div class="tool-actions"><button class="btn btn-primary" onclick="mpCopy('#rc-summary',this)">Copy summary</button><a class="btn btn-ghost" href="/myperformance-com/guides/how-to-ask-for-a-raise/">Read the raise script →</a></div>
+      <pre id="rc-summary" style="display:none"></pre>
+    </div>
+  </div></div>
+</div></section>
+<div class="wrap"><div class="ad-slot leader" data-slot="rc-mid">Advertisement</div></div>
+<section class="tight"><div class="wrap with-side">
+  <article class="prose">
+    <h2>Why one negotiation is worth more than it looks</h2>
+    <p>Every future raise is calculated as a percentage of your current salary. A 5-point difference today is not 5 points once — it is 5 points on every paycheque and every percentage raise for the rest of your time at the company, and usually your starting point at the next one. That is why the 10-year gap in the table is typically 12–15× the first-year gap.</p>
+    <h3>What a "good" raise looks like</h3>
+    <p>Typical merit-increase budgets at large employers run around 3–4% of payroll, with top performers receiving roughly 1.5–2× the average and promotions adding 8–15% on top. If your ask is above 10% you will need either a promotion case, a market-rate case (external offers, salary data) or an exceptional-performance case with numbers. Our <a href="/myperformance-com/guides/how-to-ask-for-a-raise/">guide</a> covers all three with scripts.</p>
+    <h3>Real vs nominal</h3>
+    <p>A raise below inflation is a pay cut in purchasing power. The calculator shows your real change so you can frame the conversation accordingly: "a 3% raise at 3.5% inflation means I earn less than last year."</p>
+  </article>
+  <aside><div class="card flat" style="margin-bottom:20px"><h3>Build your case</h3><ul class="list-check small"><li><a href="/myperformance-com/tools/self-evaluation-generator/">Document achievements with numbers</a></li><li><a href="/myperformance-com/guides/how-to-get-promoted/">The promotion playbook</a></li><li><a href="/myperformance-com/guides/how-to-ask-for-a-raise/">Ask-for-a-raise script</a></li></ul></div><div class="ad-slot rect sticky-side" data-slot="rc-side">Advertisement</div></aside>
+</div></section>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id)};
+function money(c,n){return c+Math.round(n).toLocaleString()}
+function calc(){var sal=+$('rc-sal').value||0,c=$('rc-cur').value||'$',r=+$('rc-raise').value,d=+$('rc-def').value,inf=+$('rc-inf').value,fut=+$('rc-fut').value,promo=+$('rc-promo').value;
+['raise','def','inf','fut'].forEach(function(k){$('rc-'+k+'-o').value=$('rc-'+k).value});
+var nw=sal*(1+r/100),df=sal*(1+d/100);$('rc-new').textContent=money(c,nw);$('rc-monthly').textContent='+'+money(c,(nw-sal)/12)+' per month before tax';$('rc-diff').textContent='+'+money(c,nw-df);
+var real=((1+r/100)/(1+inf/100)-1)*100;$('rc-real').textContent='Real change after inflation: '+(real>=0?'+':'')+real.toFixed(1)+'%';
+var rows='',summary=['Raise calculator — MyPerformance.com','Salary: '+money(c,sal)+' | Ask: '+r+'% | Default: '+d+'%'];
+[1,3,5,10].forEach(function(y){var a=0,b=0,sa=nw,sb=df;for(var i=0;i<y;i++){a+=sa;b+=sb;sa*=1+fut/100;sb*=1+fut/100}rows+='<tr><td>'+y+' yr'+(y>1?'s':'')+'</td><td>'+money(c,b)+'</td><td>'+money(c,a)+'</td><td style="color:var(--ok);font-weight:700">+'+money(c,a-b)+'</td></tr>';summary.push(y+'y cumulative gap: +'+money(c,a-b))});
+$('rc-table').innerHTML=rows;
+var po=$('rc-promo-out');if(promo>0){var pr=(promo/sal-1)*100;po.style.display='block';po.innerHTML='<strong>Promotion scenario:</strong> '+money(c,promo)+' is a '+pr.toFixed(1)+'% increase — '+(pr>r?'worth '+(pr-r).toFixed(1)+' points more than your raise ask. Lead with the promotion case.':'less than your raise ask. Negotiate the promotion salary, not just the title.')}else po.style.display='none';
+$('rc-summary').textContent=summary.join('\n');}
+$('rc').addEventListener('input',calc);calc();
+})();
+</script>
+
+</main>
+<div data-shell="band"></div>
+<div data-shell="footer"></div>
+<div data-shell="modal"></div>
+<script src="/myperformance-com/assets/js/shell.js" defer></script>
+<script src="/myperformance-com/assets/js/main.js" defer></script>
+
+</body>
+</html>
